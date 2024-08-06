@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <title>Parôquia Nsa. Remédios</title>
+    <link rel="stylesheet" type="text/css" href="estilos70.css" />  
+</head>
+<body>
+    <!--Cabeçalho-->
+    <header>
+        <!--Primeiro Menu-->
+        <div>
+            <nav class="menu1">
+                <ul>
+                    <li><a href="#"> Confissões </a></li>
+                    <li><a href="#"> Liturgia Diária </a></li>
+                    <li><a href="catequese_permanente.html"> Catequese Permanente </a></li>
+                    <li><a href="#"> Pedidos de Oração </a></li>
+                    <li><a href="#"> Orações </a></li>
+                    <li><a href="login.html">Área Restrita</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--Meio do Cabeçalho = Brasões e Nome Da Parôquia e  e -->
+        <div>
+           <img id="logo_diocese" src="imagens\brasaodiocese.png">
+            <img id="logo_paroquia" src="imagens\brasaoparoquia.png">
+            <img id="nome_paroquia" src="imagens\topodapagina.png">
+         </div>
+
+        <!--Segundo Menu-->
+        <div>
+            <nav class="menu2">
+                <li><a href="index.html"> HOME </a></li>
+                <li><a href="pagina_em_desenvolvimento.html"> A PARÔQUIA </a></li>
+                <li><a href="pagina_em_desenvolvimento.html"> CALENDÁRIO </a></li>
+                <li><a href="pagina_em_desenvolvimento.html"> PASTORAIS </a></li>
+                <li><a href="pagina_em_desenvolvimento.html"> MOVIMENTOS </a></li>
+                <li><a href="pagina_em_desenvolvimento.html"> SECRETARIA </a></li>
+                <li><a href="pagina_em_desenvolvimento.html"> CONTATOS </a></li>
+                <li><a href="sobre.html"> SOBRE </a></li>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Cadastro de Publicações</h1>
+        <a href="admin.html" target="_self"><h4>Voltar</h4></a>
+        <section>
+            <form name="f_cad_publicacoes" action="cad_pubicacoes.html" method="post">
+                <label for="chamada_noticia">
+                    <span>Chamada da Notícia<span>
+                    <textarea name="f_chamada_noticia" id="f_chamada_noticia" cols="60" rows="01"></textarea><br>
+                </label><br>
+
+                <label for="texto_noticia">
+                    <span>Texto da Noticia</span>
+                    <textarea name="f_chamada_noticia" id="f_chamada_noticia" cols="60" rows="05"></textarea><br>
+                </label><br>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="foto_banner">
+                                <span>Foto Banner</span>
+                                <input type="file" name="f_foto_banner">
+                            </label></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="foto_2">
+                                <span>Foto 2</span>
+                                <input type="file" name="f_foto_2">
+                            </label>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="foto_3">
+                                <span>Foto 3</span>
+                                <input type="file" name="f_foto_3">
+                            </label>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><label for="mini_foto_banner">Mini Foto Banner</label></td>
+                        <td><input type="file" name="f_mini_foto_banner"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="mini_foto_2">
+                                <span>Mini Foto 2</span>
+                                <input type="file" name="f_mini_foto_2">
+                            </label>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="mini_foto_3">
+                                <span>Mini Foto 3</span>
+                                <input type="file" name="f_mini_foto_3">
+                            </label>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+                <label for="data_inicio_publicacao">
+                    <span>Data Inicio da Publicação</span>
+                    <input type="date" name="f_inicio_data_publicacao" id="f_inicio_data_publicacao">
+                </label>
+                <br>
+                <label for="data_final_publicacao">
+                    <span>Data Final da Publicação</span>
+                    <input type="date" name="f_data_final_publicacao" id="f_data_final_publicacao">
+                </label>
+                <br>
+                <input type="checkbox" name="f_ativo" value=True>
+                <label>
+                    <span>Ativo</span>
+                </label>
+                <br><br>
+                <button id="gravar">Gravar</button>
+                <button type="reset">Limpar</button>
+                <br>
+            </form>
+        </section>
+
+        <section>
+            <h3>Relação de Publicações Cadastradas</h3>
+            <div>
+                <table>
+                    <tr>
+                        <th colspan="6">Chamada da Notícia</th>
+                        <th>Data Inicio da Publicação</th>
+                        <th>Data Final da Publicação</th>
+                        <th>Ativo</th>
+                        <th colspan="2">Ação</th> 
+                    </tr>
+                    <tr>
+                        <td colspan="6">Festa da Miséricórdia</td>
+                        <td>02/04/2024</td>
+                        <td>08/04/2024</td>
+                        <td>Desativo</td>
+                        <td>Editar</td>
+                        <td>Excluir</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">Domingo de Páscoa - Festa da Ressurreição</td>
+                        <td>29/03/2024</td>
+                        <td>01/04/2024</td>
+                        <td>Desativo</td>
+                        <td>Editar</td>
+                        <td>Excluir</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">Apresentação da Paixão e Morte de Jesus Cristo</td>
+                        <td>27/03/2024</td>
+                        <td>01/04/2024</td>
+                        <td>Desativo</td>
+                        <td>Editar</td>
+                        <td>Excluir</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">Missa da Luz - Sábado de Aleluia - Momento de Forte Espiritualidade</td>
+                        <td>25/03/2024</td>
+                        <td>29/03/2024</td>
+                        <td>Desativo</td>
+                        <td>Editar</td>
+                        <td>Excluir</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">Missa de Lava Pés - Instituição da Eucaristia - Fundação do Sacerdócio</td>
+                        <td>25/03/2024</td>
+                        <td>29/03/2024</td>
+                        <td>Desativo</td>
+                        <td>Editar</td>
+                        <td>Excluir</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">Domingo de Ramos - A Entrada De Jesus Cristo em Jerusalém</td>
+                        <td>20/03/2024</td>
+                        <td>25/03/2024</td>
+                        <td>Desativo</td>
+                        <td>Editar</td>
+                        <td>Excluir</td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+        </section>
+    </main>
+    <br>
+
+    <!--Rodapé-->
+    <footer>
+        <h4>Todos Os Direitos Reservados: Claudio Tadeu Severino - Trabalho de Desenvolvimento HTML - IFCE - Curso de Informática Para Web - Disciplina: Desenvolvimento WEB I - Unidade 4</h4>
+    </footer>
+</body>
+</html>

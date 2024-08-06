@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <title>Parôquia Nsa. Remédios</title>
+    <link rel="stylesheet" type="text/css" href="estilos70.css" />  
+</head>
+<body>
+    <!--Cabeçalho-->
+    <header>
+        <!--Primeiro Menu-->
+        <div>
+            <nav class="menu1">
+                <ul>
+                    <li><a href="#"> Confissões </a></li>
+                    <li><a href="#"> Liturgia Diária </a></li>
+                    <li><a href="catequese_permanente.html"> Catequese Permanente </a></li>
+                    <li><a href="#"> Pedidos de Oração </a></li>
+                    <li><a href="#"> Orações </a></li>
+                    <li><a href="login.html">Área Restrita</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--Meio do Cabeçalho = Brasões e Nome Da Parôquia e  e -->
+        <div>
+           <img id="logo_diocese" src="imagens\brasaodiocese.png">
+            <img id="logo_paroquia" src="imagens\brasaoparoquia.png">
+            <img id="nome_paroquia" src="imagens\topodapagina.png">
+         </div>
+
+        <!--Segundo Menu-->
+        <div>
+            <nav class="menu2">
+                <li><a href="index.html"> HOME </a></li>
+                <li><a href="pagina_em_desenvolvimento.html"> A PARÔQUIA </a></li>
+                <li><a href="pagina_em_desenvolvimento.html"> CALENDÁRIO </a></li>
+                <li><a href="pagina_em_desenvolvimento.html"> PASTORAIS </a></li>
+                <li><a href="pagina_em_desenvolvimento.html"> MOVIMENTOS </a></li>
+                <li><a href="pagina_em_desenvolvimento.html"> SECRETARIA </a></li>
+                <li><a href="pagina_em_desenvolvimento.html"> CONTATOS </a></li>
+                <li><a href="sobre.html"> SOBRE </a></li>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Cadastro de Usuários</h1>
+        <section id="novo_usuario" class="novo_cadastro">
+            <a href="admin.html" target="_self"><h4>Voltar</h4></a>
+            <h3>Cadastrar Usuário</h3>
+            <form name="f_cadastro_usuario" action="cad_usuarios.html" method="post">
+                <label for="">
+                    <span>Nome</span>
+                    <input type="text" name="f_nome" id="f_nome">
+                </label>
+                <label for="">
+                    <span>Usuário/span>
+                    <input type="text" name="f_username" id="f_username">
+                </label>
+                <label for="">
+                    <span>Senha</span>
+                    <input type="password" name="f_senha" id="f_senha">
+                </label>
+                <label for="">
+                    <span>Permissão</span>
+                    <select name="permissao" id="permissao" size="1">
+                        <option value="digitador">Digitador</option>
+                        <option value="operador">Operador</option>
+                        <option value="gerente">Gerenciador</option>
+                        <option value="master">Master</option>
+                    </select>
+                </label>
+                <button id="gravar">Gravar</button>
+                <button type="reset">Limpar</button>
+            </form>
+        </section>
+
+        <section>
+            <h3>Relação de Usuários Cadastrados</h3>
+            <div>
+                <table>
+                    <tr>
+                        <th colspan="3">Nome</th>
+                        <th colspan="3">Usuário</th>
+                        <th>Senha</th>
+                        <th>Tipo Acesso</th>
+                        <th colspan="2">Ação</th> 
+                    </tr>
+                    <tr>
+                        <td colspan="3">Claudio Tadeu</td>
+                        <td colspan="3">claudiotadeu</td>
+                        <td>1234</td>
+                        <td>Master</td>
+                        <td>Editar</td>
+                        <td>Excluir</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">João Maria</td>
+                        <td colspan="3">joaomaria</td>
+                        <td>asdfasd</td>
+                        <td>Digitador</td>
+                        <td>Editar</td>
+                        <td>Excluir</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Rocicléia Moura</td>
+                        <td colspan="3">rocicleiamoura@gmail.com</td>
+                        <td>asdfajkldjfa</td>
+                        <td>Operador</td>
+                        <td>Editar</td>
+                        <td>Excluir</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">José Virgulino </td>
+                        <td colspan="3">lampiao</td>
+                        <td>mariabonita</td>
+                        <td>Gerente</td>
+                        <td>Editar</td>
+                        <td>Excluir</td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+        </section>
+    </main>
+
+    <!--Rodapé-->
+    <footer>
+        <h4>Todos Os Direitos Reservados: Claudio Tadeu Severino - Trabalho de Desenvolvimento HTML - IFCE - Curso de Informática Para Web - Disciplina: Desenvolvimento WEB I - Unidade 4</h4>
+    </footer>
+</body>
+</html>
