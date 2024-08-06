@@ -309,14 +309,11 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-	margin-top:10px;
+	margin-bottom: 0px;
 	background:#222;
 	padding:10px 10px;
     color: #fff;
     font-size: 20px;
     border-radius: 0px 0px 10px 0px;
+
 }
-/* footer a{
-	text-decoration:none;
-	color:#111;
-} */
