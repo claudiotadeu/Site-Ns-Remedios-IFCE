@@ -19,6 +19,11 @@ header{
 	padding:  0px 5px;
 	width: 100%;
 	color: #ffffcc;
+	/* background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center; */
+    /* position: absolute; */
 }
 body{
     background-color: #ffffcc;
@@ -80,11 +85,19 @@ body{
     display: flex;
     justify-content: center;
 	width: 100%;
-	height: 650px;
+	height: 100vh;
 	overflow: hidden;	
+    background-image: url('/imagens/igrejamatriz.png');
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+    /* margin-top: -200px ; */
+
 }
 .sessao_ImagemFundo img{
-    width: 100%;
+    /* width: 100%; */
+
 }
 
 .sessao_noticias{
@@ -268,16 +281,12 @@ body{
     font-weight: bold;
     padding: 10px;
     border-radius: 15px 15px 0px 0px;
-
-    /* border: 1px solid #000; */
 }
 .div_demaisPublicacoes{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    /* width: 50%; */
-    /* border: 1px solid #800; */
 }
 .article_doacoes{
     display: flex;
@@ -285,7 +294,6 @@ body{
     align-items: center;
     flex-direction: row;
     width: 50%;
-    /* border: 1px solid #080; */
 }
 .article_doacoes img{
     margin: 50px;
@@ -297,12 +305,9 @@ body{
     align-items: center;
     flex-direction: row;
     width: 50%;
-    /* border: 1px solid #008; */
 }
 .article_acoes img{
     margin: 50px;
-    /* width: 50%; */
-    /* margin-right: 100px; */
 }
 
 footer{
@@ -315,5 +320,61 @@ footer{
     color: #fff;
     font-size: 20px;
     border-radius: 0px 0px 10px 0px;
+}
 
+.div_tituloFormularioLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #000; */
+}
+.div_tituloFormularioLogin h1{
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    background-color: #005288;
+    border-radius: 10px 10px 0px 0px;
+    padding: 5px;
+    /* border: 1px solid #080; */
+}
+
+
+.article_formularioLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+
+
+    border: 1px solid #000;
+
+}
+.div_moldura{
+    border-radius: 15px;
+    border: 25px solid #bbb;
+    padding: 10px;
+    /* background-color: #bbb; */
+
+}
+.div_formularioLogin{
+    border-radius: 15px;
+
+
+    border: 1px solid #800;
+
+}
+.div_rodapeFormularioLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #000; */
+}
+.div_rodapeFormularioLogin h1{
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    background-color: #005288;
+    border-radius:  0px 0px 10px 10px;
+    padding: 5px;
+    /* border: 1px solid #080; */
 }
