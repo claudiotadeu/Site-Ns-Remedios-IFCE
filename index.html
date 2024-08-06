@@ -59,25 +59,25 @@
             <article class="article_noticias">
                 <div class="div_noticia">
                     <div id="div_fotoNoticia1" class="div_fotonoticia">
-                        <img src="fotos/domingosramos.png" alt="" title="Domingo de Ramos 2024">
+                        <a href="publicacoes.html"> <img src="fotos/domingosramos.png" alt="" title="Domingo de Ramos 2024"> </a>
                     </div>
                     <p id="noticia1">Domingo de Ramos 2024</p>
                 </div> 
                 <div class="div_noticia">
                     <div id="div_fotoNoticia2" class="div_fotonoticia">
-                        <img src="fotos/missalavapes.png" alt="" title="Missa de Lava=Pés">
+                        <a href="publicacoes.html"> <img src="fotos/missalavapes.png" alt="" title="Missa de Lava=Pés"> </a>
                     </div> 
                     <p id="noticia2">Missa de Lava-Pés</p>
                 </div> 
                 <div class="div_noticia">
                     <div id="div_fotoNoticia3" class="div_fotonoticia">
-                        <img src="fotos/paixaodecristo.png" alt="" title="Paixão de Nosso Senhor Jesus Cristo">
+                        <a href="publicacoes.html"> <img src="fotos/paixaodecristo.png" alt="" title="Paixão de Nosso Senhor Jesus Cristo"> </a>
                     </div> 
                     <p id="noticia3">Paixão de Nosso Senhor Jesus Cristo</p>
                 </div> 
                 <div class="div_noticia">
                     <div id="div_fotoNoticia4" class="div_fotonoticia">
-                        <img src="fotos/missadaluz.png" alt="" title="Missa da Luz (Sábado de Aleluia)">
+                        <a href="publicacoes.html"> <img src="fotos/missadaluz.png" alt="" title="Missa da Luz (Sábado de Aleluia)"> </a>
                     </div> 
                     <p id="noticia4">Missa da Luz (Sábado de Aleluia)</p>
                 </div> 
@@ -85,55 +85,74 @@
             </article>
             <div class="div_rodapeNoticias">
                 <img src="imagens/icons/left.svg" alt="">
+                <a href="publicacoes.html">Mais Notícias</a>
                 <img src="imagens/icons/right.svg" alt="">
             </div>
         </section>
 
-
-        <!--Banner-->
         <section id="sessao_oracoes" class="sessao_oracoes">
-            <div>
+            <div class="div_tituloPedidosOracoes">
                 <p>PEDIDOS DE ORAÇÃO</p>
             </div>
 
-            <article>
-                <div>
+            <article class="article_oracoes">
+                <div class="div_contatoOracoes">
                     <label>
-                        <span>Contato: zap ou e-mail</span>
+                        <span>Contato: Zap ou E-mail</span>
                         <input type="text" name="nome">
                     </label>
                 </div>
-                <div>
-                    <label>
-                        <span>Intenções</span>
-                        <textarea name="solicitacao"  cols="25" rows="5"></textarea>
-                        <span>Até 255 letras</span>
-                    </label>
-                </div>
-                <div>
-                    <button>Enviar</button>
-                    <button>Limpar</button>
-                    <!-- <input type="submit" name="enviar" title="Enviar" value="Enviar"/>
-                    <input type="submit" name="limpar" title="Limpar" value="Limpar"/> -->
+                <div class="div_intencoes">
+                    <span>Intenções - Até 255 letras</span>
+                    <textarea name="solicitacao"  cols="50" rows="5"></textarea>
+                        <!-- <label>
+                        </label> -->
                 </div>
 
             </article>
-            <div>
-                <img id="quaresma" src="imagens\quaresma.png">
-                <img id="dizimo" src="imagens\dizimo.png">
-                <img id="doe" src="imagens\doacao.png">
-    
+            <div class="div_rodapeOracoes">
+                <button class="botao_padrao">Enviar</button>
+                <button class="botao_padrao">Limpar</button>
+                <!-- <input type="submit" name="enviar" title="Enviar" value="Enviar"/>
+                <input type="submit" name="limpar" title="Limpar" value="Limpar"/> -->
             </div>
+        </section>    
 
-
-            <img id="acaosocial" src="imagens\acaosocial.png">
-            <a href="publicacoes.html"> <img id="eventos" src="imagens\eventos.png"> </a>
+        <section class="sessao_demaisPublicacoes">
+            <div class="div_Publicacoes">
+                <div class="div_tituloDemaisPublicacoes">
+                    <p>AJUDE-NOS</p>
+                </div>
+                <div class="div_tituloDemaisPublicacoes">
+                    <p>DEMAIS PUBLICAÇÕES</p>
+                </div>
+            </div>
+            <div class="div_demaisPublicacoes">
+                <article class="article_doacoes">
+                    <img id="dizimo" src="imagens\dizimo.png">
+                    <img id="doe" src="imagens\doacao.png">
+                    <!-- <div>
+                    </div>
+                    <div>
+                    </div> -->
+                </article>
+    
+                <article class="article_acoes">
+                    <img id="acaosocial" src="imagens\acaosocial.png">
+                    <img id="eventos" src="imagens\eventos.png">
+                    <!-- <div>
+                    </div>
+                    <div>
+                        <a href="publicacoes.html">  </a>
+                    </div> -->
+                </article>
+            </div>
         </section>
     </main>
 
     <!--Rodapé-->
     <footer>
-        <h4>Todos Os Direitos Reservados: Claudio Tadeu Severino - Trabalho de Desenvolvimento HTML - IFCE - Curso de Informática Para Web - Disciplina: Desenvolvimento WEB I - Unidade 4</h4>
+        <p>Todos Os Direitos Reservados: Claudio Tadeu Severino - Trabalho de Desenvolvimento HTML - IFCE - Curso de Informática Para Web - Disciplina: Desenvolvimento WEB I - Unidade 5</p>
     </footer>
 </body>
 </html>

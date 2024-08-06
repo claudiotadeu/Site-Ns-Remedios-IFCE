@@ -140,9 +140,6 @@ body{
     margin-top: 5px;
     margin-bottom: 5px;
     width: 100%;
-    /* border: 1px solid #008; */
-
-
 }
 .div_rodapeNoticias{
     display: flex;
@@ -158,5 +155,168 @@ body{
 }
 .div_rodapeNoticias img{
     width: 30px;
+}
+
+.article_oracoes{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
 
 }
+.div_tituloPedidosOracoes{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    background-color: #ccc;
+    font-size: larger;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 15px 15px 0px 0px;
+}
+.div_contatoOracoes{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    width: 20%;
+    height: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.div_contatoOracoes input{
+    font-size: 20px;
+    border-radius: 10px;
+    margin-top: 5px;
+    border: #ddd;
+    padding: 5px;
+    width: 100%;
+}
+
+.div_intencoes{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    font-size: 25px;
+}
+.div_intencoes textarea{
+    width: 98%;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+
+}
+
+.div_rodapeOracoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    background-color: #ccc;
+    font-size: larger;
+    font-weight: bold;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 0px 0px 15px 15px;
+    
+}
+.botao_padrao{
+	text-decoration:none;
+	display:flex;
+	width:120px;
+	height:30px;
+	margin: 5px;
+	padding: 5px;
+	background-color:#248;
+	border-radius:10px;
+	color:#000;
+	font-family:Arial bold;
+	font-size:20px;
+	cursor:pointer;
+	border:0px;
+	text-transform: uppercase;
+	outline:none;
+	justify-content:center;
+	align-items:center;
+}
+.botao_padrao:hover{
+	background-color:#c22;
+	color:#fff;
+}
+
+.div_Publicacoes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+
+}
+.div_tituloDemaisPublicacoes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    background-color: orange;
+    font-size: larger;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 15px 15px 0px 0px;
+
+    /* border: 1px solid #000; */
+}
+.div_demaisPublicacoes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    /* width: 50%; */
+    /* border: 1px solid #800; */
+}
+.article_doacoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 50%;
+    /* border: 1px solid #080; */
+}
+.article_doacoes img{
+    margin: 50px;
+}
+
+.article_acoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 50%;
+    /* border: 1px solid #008; */
+}
+.article_acoes img{
+    margin: 50px;
+    /* width: 50%; */
+    /* margin-right: 100px; */
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	margin-top:10px;
+	background:#222;
+	padding:10px 10px;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 0px 0px 10px 0px;
+}
+/* footer a{
+	text-decoration:none;
+	color:#111;
+} */
