@@ -23,7 +23,9 @@ header{
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center; */
-    /* position: absolute; */
+    position: sticky;
+    top: 0;
+
 }
 body{
     background-color: #ffffcc;
@@ -322,59 +324,151 @@ footer{
     border-radius: 0px 0px 10px 0px;
 }
 
+
+/* INICIO PAGINA DE LOGIN */
+.main_login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .div_tituloFormularioLogin{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid #000; */
+    width: 400px;
+    border-radius: 25px 25px 0px 0px;
+    background-color: #005288;
+    margin-top: 80px;
 }
 .div_tituloFormularioLogin h1{
     display: flex;
     justify-content: center;
-    width: 500px;
-    background-color: #005288;
-    border-radius: 10px 10px 0px 0px;
+    width: 400px;
     padding: 5px;
     /* border: 1px solid #080; */
 }
 
-
-.article_formularioLogin{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 25px;
-
-
-    border: 1px solid #000;
-
-}
-.div_moldura{
-    border-radius: 15px;
-    border: 25px solid #bbb;
-    padding: 10px;
-    /* background-color: #bbb; */
-
-}
 .div_formularioLogin{
-    border-radius: 15px;
-
-
-    border: 1px solid #800;
-
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    border: 1px solid #005288;
 }
+.div_formularioLogin form{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.div_campoLogin{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    font-size: 25px;
+    padding: 5px;
+}
+.div_campoLogin label,input{
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.div_campoLogin label,input{
+    font-size: 20px;
+    border-radius: 8px;
+    padding: 5px;
+}
+
 .div_rodapeFormularioLogin{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid #000; */
-}
-.div_rodapeFormularioLogin h1{
-    display: flex;
-    justify-content: center;
-    width: 500px;
+    border-radius: 0px 0px 25px 25px;
     background-color: #005288;
-    border-radius:  0px 0px 10px 10px;
-    padding: 5px;
-    /* border: 1px solid #080; */
+    width: 400px;
+    padding: 10px;
+    margin-bottom: 80px;
 }
+.div_rodapeFormularioLogin button a{
+    text-decoration: none;
+    color: #000;
+}
+.div_rodapeFormularioLogin button a:hover{
+	background-color:#c22;
+	color:#fff;
+
+}
+/* FIM PAGINA DE LOGIN */
+
+
+/* INICIO PAGINA DE ADMINISTRAÇÃO */
+.div_tituloAdministracao{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: #eee;
+    padding: 5px;
+}
+.div_tituloAdministracao img{
+    width: 30px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+.div_menuCadastroAdministracao{
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.div_menuCadastroAdministracao button{
+    cursor: pointer;
+}
+
+.div_framePrincipal{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    background-color: #ddd;
+    width: 100%;
+
+    /* border: 1px solid #800;     */
+}
+
+.div_frame{
+    width: 100%;
+
+
+    /* border: 1px solid #080;     */
+
+}
+
+.div_menuLateral{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 200px;
+    height: 65vh;
+    padding: 10px;
+    border-radius: 0px 15px 15px 0px;
+    background-color: #ccc;
+    font-size: 20px;
+    color: #000;
+}
+.div_menuLateral a{
+    text-decoration: none;
+    margin-bottom: 5px;
+    color: #000;
+
+
+}
+
+.div_menuLateral h3{
+    margin-bottom: 10px;
+
+}
+
