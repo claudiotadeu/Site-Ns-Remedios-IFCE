@@ -333,7 +333,7 @@ footer{
     flex-direction: column;
 }
 
-.div_tituloFormulario{
+.div_tituloFormularioLogin{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -342,7 +342,7 @@ footer{
     background-color: #005288;
     margin-top: 80px;
 }
-.div_tituloFormulario h1,h2{
+.div_tituloFormularioLogin h1,h2{
     display: flex;
     justify-content: center;
     width: 400px;
@@ -350,7 +350,7 @@ footer{
     /* border: 1px solid #080; */
 }
 
-.div_formulario{
+.div_formularioLogin{
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -358,7 +358,7 @@ footer{
     width: 400px;
     border: 1px solid #005288;
 }
-.div_formulario form{
+.div_formularioLogin form{
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -366,7 +366,7 @@ footer{
     width: 100%;
 }
 
-.div_campoLogin{
+.div_campoForm{
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -374,19 +374,23 @@ footer{
     width: 100%;
     font-size: 25px;
     padding: 5px;
+    /* margin-bottom: 5px; */
 }
-.div_campoLogin label,input{
+.div_campoForm label,input,select{
     width: 100%;
     margin-left: 20px;
     margin-right: 20px;
-}
-.div_campoLogin label,input{
     font-size: 20px;
     border-radius: 8px;
     padding: 5px;
 }
+.div_campoForm label,input{
+    /* font-size: 20px;
+    border-radius: 8px;
+    padding: 5px; */
+}
 
-.div_rodapeFormulario{
+.div_rodapeFormularioLogin{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -396,11 +400,11 @@ footer{
     padding: 10px;
     margin-bottom: 80px;
 }
-.div_rodapeFormulario button a{
+.div_rodapeFormularioLogin button a{
     text-decoration: none;
     color: #000;
 }
-.div_rodapeFormulario button a:hover{
+.div_rodapeFormularioLogin button a:hover{
 	background-color:#c22;
 	color:#fff;
 
@@ -461,7 +465,14 @@ footer{
     text-decoration: none;
     margin-bottom: 5px;
     color: #000;
-
+}
+.div_menuLateral a:hover{
+    color: #008;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    border-radius: 10px;
+    
 }
 
 .div_menuLateral h3{
@@ -479,25 +490,97 @@ footer{
     flex-direction: row;
     align-items: center;
     width: 100%;
-    height: 62vh;
-
+    height: 65vh;
 
     border: 1px solid #000;    
-
-
-
 }
 
 .sessao_cadastroUsuarios{
-
-    width: 30%;
-    height: 60vh;
-
+    width: 27;
+    height: 65vh;
 
     border: 1px solid #000;    
+}
 
+.div_tituloFormularioUsuarios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    border-radius: 25px 25px 0px 0px;
+    background-color: #005288;
+}
+.div_tituloFormularioUsuarios h1,h2{
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    padding: 5px;
+    /* border: 1px solid #080; */
+}
+.div_campoFormFoto{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 105;
+    height: 120px;
+    /* border: 1px solid #800 */
+}
+.div_campoFormFoto input{
+    cursor: pointer;
+}
+
+.div_foto{
+    width: 130px;
+    height: 120px;
+    border: 1px solid #000;
+    margin-left: 5px;
+}
+.div_campoFormInput{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div_formularioUsuarios{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 429px;
+    border: 1px solid #005288;
+}
+.div_formularioUsuarios form{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.div_rodapeFormularioUsuarios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 25px 25px;
+    background-color: #005288;
+    width: 400px;
+    padding: 10px;
+    /* margin-bottom: 80px; */
+}
+.div_rodapeFormularioUsuarios button a{
+    text-decoration: none;
+    color: #000;
+}
+.div_rodapeFormularioUsuarios button a:hover{
+	background-color:#c22;
+	color:#fff;
 
 }
+
+
 
 .sessao_grid{
     width: 70%;

@@ -69,24 +69,24 @@
                  <div class="div_frameCadastroUsuarios">
                     <section class="sessao_cadastroUsuarios">
 
-                        <div class="div_tituloFormulario">
+                        <div id="div_tituloFormularioUsuarios" class="div_tituloFormularioUsuarios">
                             <h2>CADASTRO DE USUÁRIOS</h2>
                         </div>
-                        <div class="div_formulario">
+                        <div class="div_formularioUsuarios">
                             <form name="f_cadastro_usuario" action="cadastro_usuarios.html" method="post">
-                                <div class="div_campoLogin">
+                                <div class="div_campoForm">
                                     <label for="f_nome">Nome</label>
                                     <input type="text" name="f_nome" id="f_nome">
                                 </div>
-                                <div class="div_campoLogin">
+                                <div class="div_campoForm">
                                     <label for="f_username">Usuário</label>
                                     <input type="text" name="f_username" id="f_username">
                                 </div>
-                                <div class="div_campoLogin">
+                                <div class="div_campoForm">
                                     <label for="f_senha">Senha</label>
                                     <input type="password" name="f_senha" id="f_senha">
                                 </div>
-                                <div class="div_campoLogin">
+                                <div class="div_campoForm">
                                     <label for="select_permissao">Tipo Permissão</label>
                                     <select name="permissao" id="select_permissao" size="1">
                                         <option value="digitador">Digitador</option>
@@ -95,9 +95,21 @@
                                         <option value="master">Master</option>
                                     </select>
                                 </div>
+                                <div class="div_campoFormFoto">
+                                    <div class="div_foto">
+                                        foto
+                                    </div>
+                                    <div class="div_campoForm">
+                                        <label for="f_foto">Senha</label>
+                                        <input type="file" name="f_foto" id="f_foto">
+                                    </div>
+    
+                                </div>
+
+                                
                             </form>
                         </div>
-                        <div class="div_rodapeFormulario">
+                        <div class="div_rodapeFormularioUsuarios">
                             <button id="botao_limpar" class="botao_padrao">Gravar</button>
                             <button id="botao_limpar" class="botao_padrao">Limpar</button>
                         </div>
