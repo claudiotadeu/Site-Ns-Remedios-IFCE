@@ -86,16 +86,25 @@
                                     <label for="f_senha">Senha</label>
                                     <input type="password" name="f_senha" id="f_senha">
                                 </div>
-                                <div class="div_campoForm">
-                                    <label for="select_permissao">Tipo Permissão</label>
-                                    <select name="permissao" id="select_permissao" size="1">
-                                        <option value="digitador">Digitador</option>
-                                        <option value="operador">Operador</option>
-                                        <option value="gerente">Gerenciador</option>
-                                        <option value="master">Master</option>
-                                    </select>
+                                <div class="div_campoForm2">
+                                    <div class="div_campoForm">
+                                        <label for="select_permissao">Tipo Permissão</label>
+                                        <select name="permissao" id="select_permissao" size="1">
+                                            <option value="digitador">Digitador</option>
+                                            <option value="operador">Operador</option>
+                                            <option value="gerente">Gerenciador</option>
+                                            <option value="master">Master</option>
+                                        </select>
+                                    </div>
+                                    <div class="div_campoForm">
+                                        <label for="select_permissao">Situação</label>
+                                        <select name="situacao" id="select_situacao" size="1">
+                                            <option value="A">Ativo</option>
+                                            <option value="I">Inativo</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="div_campoFormFoto">
+                                <div class="div_campoForm2">
                                     <div class="div_foto">
                                         foto
                                     </div>
@@ -103,10 +112,7 @@
                                         <label for="f_foto">Senha</label>
                                         <input type="file" name="f_foto" id="f_foto">
                                     </div>
-    
                                 </div>
-
-                                
                             </form>
                         </div>
                         <div class="div_rodapeFormularioUsuarios">
@@ -116,50 +122,82 @@
                     </section>
     
                     <section class="sessao_grid">
-                        <h3>Relação de Usuários Cadastrados</h3>
-                        <div>
-                            <table>
-                                <tr>
-                                    <th colspan="3">Nome</th>
-                                    <th colspan="3">Usuário</th>
-                                    <th>Senha</th>
-                                    <th>Tipo Acesso</th>
-                                    <th colspan="2">Ação</th> 
-                                </tr>
-                                <tr>
-                                    <td colspan="3">Claudio Tadeu</td>
-                                    <td colspan="3">claudiotadeu</td>
-                                    <td>1234</td>
-                                    <td>Master</td>
-                                    <td>Editar</td>
-                                    <td>Excluir</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3">João Maria</td>
-                                    <td colspan="3">joaomaria</td>
-                                    <td>asdfasd</td>
-                                    <td>Digitador</td>
-                                    <td>Editar</td>
-                                    <td>Excluir</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3">Rocicléia Moura</td>
-                                    <td colspan="3">rocicleiamoura@gmail.com</td>
-                                    <td>asdfajkldjfa</td>
-                                    <td>Operador</td>
-                                    <td>Editar</td>
-                                    <td>Excluir</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3">José Virgulino </td>
-                                    <td colspan="3">lampiao</td>
-                                    <td>mariabonita</td>
-                                    <td>Gerente</td>
-                                    <td>Editar</td>
-                                    <td>Excluir</td>
-                                </tr>
-                            </table>
-                            <br>
+                        <div class="div_tituloGrid">
+                            <h2>Lista de Usuários Cadastrados</h2>
+                        </div>
+                        <div class="div_cabecalhoGrid">
+                            <div class="div_Cabecalhocoluna1">Nome</div>
+                            <div class="div_Cabecalhocoluna2">Usuário</div>
+                            <div class="div_Cabecalhocoluna3">Tipo Acesso</div>
+                            <div class="div_Cabecalhocoluna4">Situação</div>
+                            <div class="div_Cabecalhocoluna5">Ação</div>
+                        </div>
+                        <div class="div_corpoGrid">
+                            <div class="div_dadosGrid linhaGrid">
+                                <div class="div_dadocoluna1">Claudio Tadeu</div>
+                                <div class="div_dadocoluna2">claudiotadeu@email.com</div>
+                                <div class="div_dadocoluna3">Master</div>
+                                <div class="div_dadocoluna4">
+                                    <div>A</div>
+                                    <div><img src="/imagens/icons/ativar.svg" alt=""></div>
+                                    </div>
+                                <div class="div_dadocoluna5">
+                                    <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
+                                    <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
+                                    <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
+                                </div>
+                            </div>
+
+                            <div class="div_dadosGrid linhaGrid">
+                                <div class="div_dadocoluna1">João Maria</div>
+                                <div class="div_dadocoluna2">joaomaria@email.com</div>
+                                <div class="div_dadocoluna3">Digitador</div>
+                                <div class="div_dadocoluna4">
+                                    <div>A</div>
+                                    <div><img src="/imagens/icons/ativar.svg" alt=""></div>
+                                    </div>
+                                <div class="div_dadocoluna5">
+                                    <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
+                                    <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
+                                    <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
+                                </div>
+                            </div>
+
+                            <div class="div_dadosGrid linhaGrid">
+                                <div class="div_dadocoluna1">Rocicléia Moura</div>
+                                <div class="div_dadocoluna2">rocicleiamoura@gmail.com</div>
+                                <div class="div_dadocoluna3">Operador</div>
+                                <div class="div_dadocoluna4">
+                                    <div>A</div>
+                                    <div><img src="/imagens/icons/ativar.svg" alt=""></div>
+                                    </div>
+                                <div class="div_dadocoluna5">
+                                    <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
+                                    <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
+                                    <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
+                                </div>
+                            </div>
+
+                            <div class="div_dadosGrid linhaGrid">
+                                <div class="div_dadocoluna1">José Virgulino</div>
+                                <div class="div_dadocoluna2">lampiao@email.com</div>
+                                <div class="div_dadocoluna3">Gerente</div>
+                                <div class="div_dadocoluna4">
+                                    <div>A</div>
+                                    <div><img src="/imagens/icons/desativar.svg" alt=""></div>
+                                    </div>
+                                <div class="div_dadocoluna5">
+                                    <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
+                                    <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
+                                    <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div_rodapeGrid">
+                            <h3>Total de Registros: 04</h3>
+                            <h3>Qtde de Registros Ativos: 03</h3>
+                            <h3>Qtde de Registros Inativos: 01</h3>
                         </div>
                     </section>
                  </div>
@@ -170,7 +208,7 @@
 
     <!--Rodapé-->
     <footer>
-        <h4>Todos Os Direitos Reservados: Claudio Tadeu Severino - Trabalho de Desenvolvimento HTML - IFCE - Curso de Informática Para Web - Disciplina: Desenvolvimento WEB I - Unidade 4</h4>
+        <p>Todos Os Direitos Reservados: Claudio Tadeu Severino - Trabalho de Desenvolvimento HTML - CSS - IFCE - Curso de Informática Para Web - Disciplina: Desenvolvimento WEB I - Unidade 5</p>
     </footer>
 </body>
 </html>
