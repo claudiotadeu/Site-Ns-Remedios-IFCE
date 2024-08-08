@@ -5,61 +5,230 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <title>Parôquia Nsa. Remédios</title>
-    <link rel="stylesheet" type="text/css" href="estilos70.css" />  
+    <link rel="stylesheet" type="text/css" href="estilos/estilos.css" />  
 </head>
 <body>
     <!--Cabeçalho-->
     <header>
         <!--Primeiro Menu-->
-        <div>
-            <nav class="menu1">
+        <div class="div_menu1">
+            <nav>
                 <ul>
                     <li><a href="#"> Confissões </a></li>
+                    <li><a href="#"> Orações </a></li>
                     <li><a href="#"> Liturgia Diária </a></li>
                     <li><a href="catequese_permanente.html"> Catequese Permanente </a></li>
-                    <li><a href="#"> Pedidos de Oração </a></li>
-                    <li><a href="#"> Orações </a></li>
+                    <li><a href="#sessao_oracoes"> Pedidos de Oração </a></li>
                     <li><a href="login.html">Área Restrita</a></li>
                 </ul>
             </nav>
         </div>
 
         <!--Meio do Cabeçalho = Brasões e Nome Da Parôquia e  e -->
-        <div>
+        <div class="div_logo">
            <img id="logo_diocese" src="imagens\brasaodiocese.png">
             <img id="logo_paroquia" src="imagens\brasaoparoquia.png">
             <img id="nome_paroquia" src="imagens\topodapagina.png">
          </div>
 
         <!--Segundo Menu-->
-        <div>
-            <nav class="menu2">
-                <li><a href="index.html"> HOME </a></li>
-                <li><a href="pagina_em_desenvolvimento.html"> A PARÔQUIA </a></li>
-                <li><a href="pagina_em_desenvolvimento.html"> CALENDÁRIO </a></li>
-                <li><a href="pagina_em_desenvolvimento.html"> PASTORAIS </a></li>
-                <li><a href="pagina_em_desenvolvimento.html"> MOVIMENTOS </a></li>
-                <li><a href="pagina_em_desenvolvimento.html"> SECRETARIA </a></li>
-                <li><a href="pagina_em_desenvolvimento.html"> CONTATOS </a></li>
-                <li><a href="sobre.html"> SOBRE </a></li>
+        <div  class="div_menu2">
+            <nav>
+                <ul>
+                    <li><a href="index.html"> HOME </a></li>
+                    <li><a href="pagina_em_desenvolvimento.html"> A PARÔQUIA </a></li>
+                    <li><a href="publicacoes.html"> NOTÍCIAS </a></li>
+                    <li><a href="pagina_em_desenvolvimento.html"> PASTORAIS </a></li>
+                    <li><a href="pagina_em_desenvolvimento.html"> MOVIMENTOS </a></li>
+                    <li><a href="pagina_em_desenvolvimento.html"> SECRETARIA </a></li>
+                    <li><a href="pagina_em_desenvolvimento.html"> CONTATOS </a></li>
+                    <li><a href="sobre.html"> SOBRE </a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main class="main_administracao">
+        <div class="div_tituloAdministracao">
+            <div class="div_menuCadastroAdministracao">
+                <button><img src="/imagens/icons/menu.svg" alt=""></button>
+            </div>
+            <div>
+                <a href="login.html" target="_self"><img src="/imagens/icons/logout.svg" alt="" title="Efetuar Logof"></a>
+                <a href="pagina_em_desenvolvimento.html" target="_self"><img src="/imagens/icons/settings.svg" alt="" title="Configurações"></a>
+                    
+            </div>
+        </div>
+        <div class="div_framePrincipal">
+            <div class="div_menuLateral">
+                <a href="cadastro_usuarios.html" target="_self">Usuários</a>
+                <a href="cadastro_pubicacoes.html" target="_self">Publicações</a>
+            </div>
+            <div class="div_frame">
+                <!-- <iframe src="" frameborder="0"></iframe> -->
+                 <div class="div_frameCadastroPublicacoes">
+                    <section class="sessao_cadastroPublicacoes">
+
+                        <div id="div_tituloFormularioPublicacoes" class="div_tituloFormularioPublicacoes">
+                            <h2>CADASTRO DE PUBICAÇÕES</h2>
+                        </div>
+                        <div class="div_formularioPublicacoes">
+                            <form name="f_cadastro_Publicacoes" action="cadastro_pubicacoes.html" method="post">
+                                <div class="div_campoForm">
+                                    <label for="f_chamada_noticia">Chamada da Notícia</label>
+                                    <input type="text" name="f_chamada_noticia" id="f_chamada_noticia">
+                                </div>
+                                <div class="div_campoForm2">
+                                    <div class="div_campoForm">
+                                        <label for="f_data_inicio_publicacao">Data Inicio da Publicação</label>
+                                        <input type="date" name="f_data_inicio_publicacao" id="f_data_inicio_publicacao">
+                                    </div>
+                                    <div class="div_campoForm">
+                                        <label for="f_data_fim_publicacao">Data Inicio da Publicação</label>
+                                        <input type="date" name="f_data_fim_publicacao" id="f_data_fim_publicacao">
+                                    </div>
+                                    
+                                </div>
+                
+                                <div class="div_campoForm">
+                                    <label for="f_textonoticia">Texto da Noticia</label>
+                                    <textarea name="f_textonoticia" id="f_textonoticia" cols="60" rows="05"></textarea>
+                                </div>
+
+                                <div class="div_campoForm">
+                                    <label for="select_permissao">Situação</label>
+                                    <select name="situacao" id="select_situacao" size="1">
+                                        <option value="A">Ativo</option>
+                                        <option value="I">Inativo</option>
+                                    </select>
+                                </div>
+
+
+
+
+                                <!-- <input type="checkbox" name="f_ativo" value=True>
+                                <label>
+                                    <span>Ativo</span>
+                                </label> -->
+
+
+
+                                <div class="div_campoForm">
+                                </div>
+                                <div class="div_campoForm">
+                                </div>
+                                <div class="div_campoForm">
+                                </div>
+
+                                <div class="div_campoForm2">
+                                </div>
+                                <div class="div_campoForm2">
+                                    <div class="div_foto">
+                                        foto
+                                    </div>
+                                    <div class="div_campoForm">
+                                        <label for="f_foto">Senha</label>
+                                        <input type="file" name="f_foto" id="f_foto">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="div_rodapeFormularioPublicacoes">
+                            <button id="botao_limpar" class="botao_padrao">Gravar</button>
+                            <button id="botao_limpar" class="botao_padrao">Limpar</button>
+                        </div>
+                    </section>
+    
+                    <!-- <section class="sessao_grid">
+                        <div class="div_tituloGrid">
+                            <h2>Lista de Publicaçoes Cadastradas</h2>
+                        </div>
+                        <div class="div_cabecalhoGrid">
+                            <div class="div_Cabecalhocoluna1">Nome</div>
+                            <div class="div_Cabecalhocoluna2">Usuário</div>
+                            <div class="div_Cabecalhocoluna3">Tipo Acesso</div>
+                            <div class="div_Cabecalhocoluna4">Situação</div>
+                            <div class="div_Cabecalhocoluna5">Ação</div>
+                        </div>
+                        <div class="div_corpoGrid">
+                            <div class="div_dadosGrid linhaGrid">
+                                <div class="div_dadocoluna1">Claudio Tadeu</div>
+                                <div class="div_dadocoluna2">claudiotadeu@email.com</div>
+                                <div class="div_dadocoluna3">Master</div>
+                                <div class="div_dadocoluna4">
+                                    <div>A</div>
+                                    <div><img src="/imagens/icons/ativar.svg" alt=""></div>
+                                    </div>
+                                <div class="div_dadocoluna5">
+                                    <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
+                                    <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
+                                    <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
+                                </div>
+                            </div>
+
+                            <div class="div_dadosGrid linhaGrid">
+                                <div class="div_dadocoluna1">João Maria</div>
+                                <div class="div_dadocoluna2">joaomaria@email.com</div>
+                                <div class="div_dadocoluna3">Digitador</div>
+                                <div class="div_dadocoluna4">
+                                    <div>A</div>
+                                    <div><img src="/imagens/icons/ativar.svg" alt=""></div>
+                                    </div>
+                                <div class="div_dadocoluna5">
+                                    <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
+                                    <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
+                                    <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
+                                </div>
+                            </div>
+
+                            <div class="div_dadosGrid linhaGrid">
+                                <div class="div_dadocoluna1">Rocicléia Moura</div>
+                                <div class="div_dadocoluna2">rocicleiamoura@gmail.com</div>
+                                <div class="div_dadocoluna3">Operador</div>
+                                <div class="div_dadocoluna4">
+                                    <div>A</div>
+                                    <div><img src="/imagens/icons/ativar.svg" alt=""></div>
+                                    </div>
+                                <div class="div_dadocoluna5">
+                                    <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
+                                    <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
+                                    <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
+                                </div>
+                            </div>
+
+                            <div class="div_dadosGrid linhaGrid">
+                                <div class="div_dadocoluna1">José Virgulino</div>
+                                <div class="div_dadocoluna2">lampiao@email.com</div>
+                                <div class="div_dadocoluna3">Gerente</div>
+                                <div class="div_dadocoluna4">
+                                    <div>A</div>
+                                    <div><img src="/imagens/icons/desativar.svg" alt=""></div>
+                                    </div>
+                                <div class="div_dadocoluna5">
+                                    <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
+                                    <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
+                                    <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div_rodapeGrid">
+                            <h3>Total de Registros: 04</h3>
+                            <h3>Qtde de Registros Ativos: 03</h3>
+                            <h3>Qtde de Registros Inativos: 01</h3>
+                        </div>
+                    </section> -->
+                 </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- <main>
         <h1>Cadastro de Publicações</h1>
         <a href="admin.html" target="_self"><h4>Voltar</h4></a>
         <section>
             <form name="f_cad_publicacoes" action="cad_pubicacoes.html" method="post">
-                <label for="chamada_noticia">
-                    <span>Chamada da Notícia<span>
-                    <textarea name="f_chamada_noticia" id="f_chamada_noticia" cols="60" rows="01"></textarea><br>
-                </label><br>
-
-                <label for="texto_noticia">
-                    <span>Texto da Noticia</span>
-                    <textarea name="f_chamada_noticia" id="f_chamada_noticia" cols="60" rows="05"></textarea><br>
-                </label><br>
                 <table>
                     <tr>
                         <td>
@@ -110,20 +279,6 @@
                         <td></td>
                     </tr>
                 </table>
-                <label for="data_inicio_publicacao">
-                    <span>Data Inicio da Publicação</span>
-                    <input type="date" name="f_inicio_data_publicacao" id="f_inicio_data_publicacao">
-                </label>
-                <br>
-                <label for="data_final_publicacao">
-                    <span>Data Final da Publicação</span>
-                    <input type="date" name="f_data_final_publicacao" id="f_data_final_publicacao">
-                </label>
-                <br>
-                <input type="checkbox" name="f_ativo" value=True>
-                <label>
-                    <span>Ativo</span>
-                </label>
                 <br><br>
                 <button id="gravar">Gravar</button>
                 <button type="reset">Limpar</button>
@@ -195,7 +350,7 @@
             </div>
         </section>
     </main>
-    <br>
+    <br> -->
 
     <!--Rodapé-->
     <footer>
