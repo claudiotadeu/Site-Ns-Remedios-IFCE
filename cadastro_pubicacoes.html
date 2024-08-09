@@ -74,11 +74,11 @@
                         </div>
                         <div class="div_formularioPublicacoes">
                             <form name="f_cadastro_Publicacoes" action="cadastro_pubicacoes.html" method="post">
-                                <div class="div_campoForm">
-                                    <label for="f_chamada_noticia">Chamada da Notícia</label>
-                                    <input type="text" name="f_chamada_noticia" id="f_chamada_noticia">
-                                </div>
                                 <div class="div_campoForm2">
+                                    <div class="div_campoForm">
+                                        <label for="f_chamada_noticia">Chamada da Notícia</label>
+                                        <input type="text" name="f_chamada_noticia" id="f_chamada_noticia">
+                                    </div>
                                     <div class="div_campoForm">
                                         <label for="f_data_inicio_publicacao">Data Inicio da Publicação</label>
                                         <input type="date" name="f_data_inicio_publicacao" id="f_data_inicio_publicacao">
@@ -87,7 +87,14 @@
                                         <label for="f_data_fim_publicacao">Data Inicio da Publicação</label>
                                         <input type="date" name="f_data_fim_publicacao" id="f_data_fim_publicacao">
                                     </div>
-                                    
+                                    <div class="div_campoForm">
+                                        <label for="select_permissao">Situação</label>
+                                        <select name="situacao" id="select_situacao" size="1">
+                                            <option value="A">Ativo</option>
+                                            <option value="I">Inativo</option>
+                                        </select>
+                                    </div>
+                                        
                                 </div>
                 
                                 <div class="div_campoForm">
@@ -95,25 +102,89 @@
                                     <textarea name="f_textonoticia" id="f_textonoticia" cols="60" rows="05"></textarea>
                                 </div>
 
-                                <div class="div_campoForm">
-                                    <label for="select_permissao">Situação</label>
-                                    <select name="situacao" id="select_situacao" size="1">
-                                        <option value="A">Ativo</option>
-                                        <option value="I">Inativo</option>
-                                    </select>
+
+                                <div class="div_campoForm2">
+                                    <div class="div_campoForm2">
+                                        <div class="div_banner">
+                                            <img src="#" alt="" title="Imagem Banner">
+                                        </div>
+                                        <div class="div_campoForm">
+                                            <label for="f_banner">Imagem Banner</label>
+                                            <input type="file" name="f_banner" id="f_banner">
+                                        </div>
+                                    </div>
+                                    <div class="div_campoForm2">
+                                        <div class="div_imagem">
+                                            <img src="#" alt="" title="Imagem Imagem 1">
+                                        </div>
+                                        <div class="div_campoForm">
+                                            <label for="f_imagem1">Imagem 1</label>
+                                            <input type="file" name="f_imagem1" id="f_imagem1">
+                                        </div>
+                                    </div>
+                                    <div class="div_campoForm2">
+                                        <div class="div_imagem">
+                                            <img src="#" alt="" title="Imagem 2">
+                                        </div>
+                                        <div class="div_campoForm">
+                                            <label for="f_imagem2">Imagem 2</label>
+                                            <input type="file" name="f_imagem2" id="f_imagem2">
+                                        </div>
+                                    </div>
+                                    <div class="div_campoForm2">
+                                        <div class="div_imagem">
+                                            <img src="#" alt="" title="Imagem Banner">
+                                        </div>
+                                        <div class="div_campoForm">
+                                            <label for="f_imagem3">Imagem 3</label>
+                                            <input type="file" name="f_imagem3" id="f_imagem3">
+                                        </div>
+                                    </div>
+                                    <div class="div_campoForm2">
+                                        <div class="div_imagem">
+                                            <img src="#" alt="" title="Imagem 4">
+                                        </div>
+                                        <div class="div_campoForm">
+                                            <label for="f_imagem4">Imagem Imagem 4</label>
+                                            <input type="file" name="f_imagem4" id="f_imagem4">
+                                        </div>
+                                    </div>
+                    
                                 </div>
 
 
 
 
-                                <!-- <input type="checkbox" name="f_ativo" value=True>
-                                <label>
-                                    <span>Ativo</span>
-                                </label> -->
 
 
 
-                                <div class="div_campoForm">
+                                <!-- <div class="div_campoForm2">
+                                    <div class="div_campoForm">
+                                        <div class="div_banner">
+                                            Banner
+                                        </div>
+                                        <label for="f_banner">Banner</label>
+                                        <input type="file" name="f_banner" id="f_banner">
+                                    </div>
+                                    <div class="div_campoForm">
+                                        <div class="div_banner">
+                                            Banner
+                                        </div>
+                                        <label for="f_banner">Banner</label>
+                                        <input type="file" name="f_banner" id="f_banner">
+                                    </div>
+
+                                </div> -->
+
+                                <!-- <td>
+                                    <label for="foto_banner">
+                                        <span>Foto Banner</span>
+                                        <input type="file" name="f_foto_banner">
+                                    </label></td>
+                                <td></td> -->
+        
+
+                                <!-- <div class="div_campoForm">
                                 </div>
                                 <div class="div_campoForm">
                                 </div>
@@ -121,8 +192,8 @@
                                 </div>
 
                                 <div class="div_campoForm2">
-                                </div>
-                                <div class="div_campoForm2">
+                                </div> -->
+                                <!-- <div class="div_campoForm2">
                                     <div class="div_foto">
                                         foto
                                     </div>
@@ -130,7 +201,7 @@
                                         <label for="f_foto">Senha</label>
                                         <input type="file" name="f_foto" id="f_foto">
                                     </div>
-                                </div>
+                                </div> -->
                             </form>
                         </div>
                         <div class="div_rodapeFormularioPublicacoes">
@@ -231,12 +302,6 @@
             <form name="f_cad_publicacoes" action="cad_pubicacoes.html" method="post">
                 <table>
                     <tr>
-                        <td>
-                            <label for="foto_banner">
-                                <span>Foto Banner</span>
-                                <input type="file" name="f_foto_banner">
-                            </label></td>
-                        <td></td>
                     </tr>
                     <tr>
                         <td>
@@ -245,22 +310,14 @@
                                 <input type="file" name="f_foto_2">
                             </label>
                         </td>
-                        <td></td>
-                    </tr>
-                    <tr>
                         <td>
                             <label for="foto_3">
                                 <span>Foto 3</span>
                                 <input type="file" name="f_foto_3">
                             </label>
                         </td>
-                        <td></td>
-                    </tr>
-                    <tr>
                         <td><label for="mini_foto_banner">Mini Foto Banner</label></td>
                         <td><input type="file" name="f_mini_foto_banner"></td>
-                    </tr>
-                    <tr>
                         <td>
                             <label for="mini_foto_2">
                                 <span>Mini Foto 2</span>
