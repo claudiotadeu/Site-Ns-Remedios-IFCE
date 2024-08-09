@@ -95,12 +95,6 @@ body{
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
-    /* margin-top: -200px ; */
-
-}
-.sessao_ImagemFundo img{
-    /* width: 100%; */
-
 }
 
 .sessao_noticias{
@@ -509,7 +503,6 @@ footer{
     width: 400px;
     height: 429px;
     border: 1px solid var(--titulorodapeFormGrid);
-
 }
 .div_formularioUsuarios form{
     display: flex;
@@ -526,15 +519,10 @@ footer{
     flex-direction: row;
     width: 100%;
     margin-top: 5px;
-
-    /* border: 1px solid #800; */
-
 }
 .div_campoForm2 input{
     cursor: pointer;
 }
-
-
 
 .div_foto{
     width: 130px;
@@ -699,7 +687,6 @@ div_campoForm2
 .sessao_cadastroPublicacoes{
     width: 100%;
     height: 65vh;
-    border: 1px solid #000;
 }
 
 .div_tituloFormularioPublicacoes{
@@ -883,6 +870,75 @@ div_campoForm2
     border-radius:0px 0px 25px 25px;
     padding: 21px;
 }
+
+.sessao_gridPublicacoes{
+    width: 100%;
+
+    /* border: 1px solid #000; */
+}
+
+/* .div_cabecalhoGrid{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+    background-color: var(--titulorodapeFormGrid);
+    color: #fff;    
+    font-size: 20px;
+} */
+.div_Cabecalhocoluna1Publicacoes{
+    width: 60%;
+}
+.div_Cabecalhocoluna2Publicacoes{
+    width: 15%;
+}
+.div_Cabecalhocoluna3Publicacoes{
+    width: 15%;
+}
+.div_Cabecalhocoluna4Publicacoes{
+    width: 15%;
+}
+.div_Cabecalhocoluna5Publicacoes{
+    width: 10%;
+}
+
+.div_dadocoluna1Publicacoes{
+    width: 60%;
+}
+.div_dadocoluna2Publicacoes{
+    width: 15%;
+}
+.div_dadocoluna3Publicacoes{
+    width: 15%;
+}
+.div_dadocoluna4Publicacoes{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 15%;
+    padding-left: 10px;
+}
+.div_dadocoluna4Publicacoes img{
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.div_dadocoluna5Publicacoes{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 10%;
+}
+.div_dadocoluna5Publicacoes img{
+    width: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
 
 /* FIM  PAGINA DE CADASTRO DE PUBLICAÇÕES */
 
