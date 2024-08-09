@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <title>Parôquia Nsa. Remédios</title>
     <link rel="stylesheet" type="text/css" href="estilos/estilos.css" />  
+    <link rel="stylesheet" type="text/css" href="estilos/publicacoes.css" />  
 </head>
 <body>
     <!--Cabeçalho-->
@@ -51,8 +52,20 @@
     <main class="main_administracao">
         <div class="div_tituloAdministracao">
             <div class="div_menuCadastroAdministracao">
-                <button><img src="/imagens/icons/menu.svg" alt=""></button>
+                <button><img src="/imagens/icons/menu.svg" alt="" title="Menu Lateral"></button>
             </div>
+
+            <div class="div_filtro">
+                <div>
+                    <label for="input_filtroChamada">Filtrar Por Chamada:</label>
+                </div>
+                <input type="text" name="input_filtroChamada" id="input_filtroChamada">
+                <img src="imagens/icons/search.svg" alt="" title="filtrar Por Chamada">
+
+            </div>
+
+
+
             <div>
                 <a href="login.html" target="_self"><img src="/imagens/icons/logout.svg" alt="" title="Efetuar Logof"></a>
                 <a href="pagina_em_desenvolvimento.html" target="_self"><img src="/imagens/icons/settings.svg" alt="" title="Configurações"></a>
@@ -61,12 +74,13 @@
         </div>
         <div class="div_framePrincipal">
             <div class="div_menuLateral">
+                <a href="administracao.html" target="_self">Administração</a>
                 <a href="cadastro_usuarios.html" target="_self">Usuários</a>
                 <a href="cadastro_pubicacoes.html" target="_self">Publicações</a>
             </div>
             <div class="div_frame">
                 <!-- <iframe src="" frameborder="0"></iframe> -->
-                 <div class="div_frameCadastroPublicacoes">
+                <div class="div_frameCadastroPublicacoes">
                     <section class="sessao_cadastroPublicacoes">
                         <div id="div_tituloFormularioPublicacoes" class="div_tituloFormularioPublicacoes">
                             <h2>CADASTRO DE PUBICAÇÕES</h2>
@@ -152,12 +166,14 @@
                             <button id="botao_limpar" class="botao_padrao">Limpar</button>
                         </div>
                     </section>
-
+                    <div class="div_divisaoSessao">
+                        <h2>Lista de Publicações Cadastradas</h2>
+                    </div>
                     <section class="sessao_gridPublicacoes">
                         <div class="div_tituloGrid">
-                            <h2>Lista de Publicaçoes Cadastradas</h2>
+                            <!-- <h2>Lista de Publicaçoes Cadastradas</h2> -->
                         </div>
-                        <div class="div_cabecalhoGrid">
+                        <div class="div_cabecalhoGridPublicacoes">
                             <div class="div_Cabecalhocoluna1Publicacoes">Chamada</div>
                             <div class="div_Cabecalhocoluna2Publicacoes">Data Inicio</div>
                             <div class="div_Cabecalhocoluna3Publicacoes">Data Fim</div>

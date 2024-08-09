@@ -12,7 +12,6 @@ html{
     --titulorodapeFormGrid: #005288;
     --cinzamedio: #ccc;
     --corfundo:  #ffffcc;
-
 }
 
 header{
@@ -20,16 +19,11 @@ header{
 	padding:  0px 5px;
 	width: 100%;
 	color: #ffffcc;
-	/* background-attachment: fixed;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center; */
     position: sticky;
     top: 0;
-
 }
 body{
-    background-color: #ffffcc;
+    background-color: var(--corfundo);
 }
 
 .div_menu1{
@@ -47,6 +41,9 @@ body{
     text-decoration: none;
     padding-right: 5px;
     padding-left: 5px;
+    color: #248;
+    text-shadow: 3px 3px 6px #000000;
+
 }
 .div_menu1 nav ul li a:hover{
     color: #800;
@@ -76,6 +73,8 @@ body{
     text-decoration: none;
     padding-right: 5px;
     padding-left: 5px;
+    color: #248;
+    text-shadow: 3px 3px 6px #000000;
 }
 .div_menu2 nav ul a:hover{
     color: #800;
@@ -215,7 +214,6 @@ body{
     font-size: 20px;
     margin-right: 15px;
     margin-left: 15px;
-
 }
 
 .div_rodapeOracoes{
@@ -230,7 +228,6 @@ body{
     padding: 5px;
     margin-top: 10px;
     border-radius: 0px 0px 15px 15px;
-    
 }
 .botao_padrao{
 	text-decoration:none;
@@ -256,12 +253,12 @@ body{
 	color:#fff;
 }
 
+
 .div_Publicacoes{
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-
 }
 .div_tituloDemaisPublicacoes{
     display: flex;
@@ -307,7 +304,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-	margin-bottom: 0px;
+	/* margin-bottom: 0px; */
 	background:#222;
 	padding:10px 10px;
     color: #fff;
@@ -322,6 +319,7 @@ footer{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 71vh;
 }
 
 .div_tituloFormularioLogin{
@@ -364,9 +362,6 @@ footer{
     width: 100%;
     font-size: 25px;
     padding: 5px;
-    /* margin: 5px; */
-
-    /* border: 1px solid #000; */
 }
 .div_campoForm label,input,select,textarea{
     width: 100%;
@@ -375,6 +370,20 @@ footer{
     font-size: 20px;
     border-radius: 8px;
     padding: 5px;
+    /* border-radius: 5px; */
+}
+
+.div_campoForm2{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 2px;
+    /* padding: 5px; */
+}
+.div_campoForm2 input{
+    cursor: pointer;
 }
 
 .div_rodapeFormularioLogin{
@@ -397,9 +406,9 @@ footer{
 }
 /* FIM PAGINA DE LOGIN */
 
-
 /* INICIO PAGINA DE ADMINISTRAÇÃO */
 .div_tituloAdministracao{
+    
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -417,6 +426,30 @@ footer{
 }
 .div_menuCadastroAdministracao button{
     cursor: pointer;
+}
+
+
+.div_filtro{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    width: 30%;
+    /* border: 1px solid #000; */
+}
+.div_filtro label{
+    width: 200px;
+    font-size: 20px;
+    /* border: 1px solid #000; */
+}
+.div_filtro img{
+    cursor: pointer;
+    width: 15%;
+}
+
+.div_logofConfiguracao{
+    /* border: 1px solid #000; */
+
 }
 
 .div_framePrincipal{
@@ -440,7 +473,7 @@ footer{
     justify-content: flex-start;
     flex-direction: column;
     width: 200px;
-    height: 65vh;
+    /* height: 100vh; */
     padding: 10px;
     border-radius: 0px 15px 15px 0px;
     background-color: #ccc;
@@ -463,483 +496,59 @@ footer{
 .div_menuLateral h3{
     margin-bottom: 10px;
 }
+
+.div_menuLateralAdministracao{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 200px;
+    height: 65vh;
+    padding: 10px;
+    border-radius: 0px 15px 15px 0px;
+    background-color: #ccc;
+    font-size: 20px;
+    color: #000;
+}
+.div_menuLateralAdministracao a{
+    text-decoration: none;
+    margin-bottom: 5px;
+    color: #000;
+}
+.div_menuLateralAdministracao a:hover{
+    color: #008;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.div_menuLateralAdministracao h3{
+    margin-bottom: 10px;
+}
+
+.div_mensagemAdministracao{
+    font-size: 3em;
+    color: white;
+    text-shadow: 3px 8px 6px #000000;
+
+}
 /* FIM PAGINA DE ADMINISTRAÇÃO */
 
-/* INICIO PAGINA DE CADASTRO DE USUÁRIOS */
-.div_frameCadastroUsuarios{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    height: 65vh;
-}
-
-.sessao_cadastroUsuarios{
-    width: 27;
-    height: 65vh;
-}
-
-.div_tituloFormularioUsuarios{
+/* INICIO PAGINA DE ADMINISTRAÇÃO */
+.div_fundoGradiente{
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 400px;
-    border-radius: 25px 25px 0px 0px;
-    background-color: var(--titulorodapeFormGrid);
-}
-.div_tituloFormularioUsuarios h1,h2{
-    display: flex;
-    justify-content: center;
-    width: 400px;
-    padding: 5px;
-}
-
-.div_formularioUsuarios{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     flex-direction: column;
-    width: 400px;
-    height: 429px;
-    border: 1px solid var(--titulorodapeFormGrid);
-}
-.div_formularioUsuarios form{
-    display: flex;
-    justify-content: flex-start;
     align-items: center;
-    flex-direction: column;
-    width: 100%;
-}
-
-.div_campoForm2{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    margin-top: 5px;
-}
-.div_campoForm2 input{
-    cursor: pointer;
-}
-
-.div_foto{
-    width: 130px;
-    height: 120px;
-    border: 1px solid #000;
-    margin-left: 5px;
-    margin-top: 5px;
-}
-.div_campoFormInput{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-}
-
-.div_rodapeFormularioUsuarios{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0px 0px 25px 25px;
-    background-color: var(--titulorodapeFormGrid);
-    width: 400px;
-    padding: 12px;
-}
-.div_rodapeFormularioUsuarios button a{
-    text-decoration: none;
-    color: #000;
-}
-.div_rodapeFormularioUsuarios button a:hover{
-	background-color:#c22;
-	color:#fff;
-}
-
-.sessao_grid{
-    width: 100%;
-    height: 65vh;
-}
-
-.div_tituloGrid{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--titulorodapeFormGrid);
-    border-radius: 25px 25px 0px 0px;
-}
-
-.div_cabecalhoGrid{
-    display: flex;
-    justify-content:flex-start;
-    align-items: center;
-    flex-direction: row;
-    padding: 10px;
-    background-color: var(--titulorodapeFormGrid);
-    color: #fff;    
-    font-size: 20px;
-}
-.div_Cabecalhocoluna1{
-    width: 25%;
-}
-.div_Cabecalhocoluna2{
-    width: 30%;
-}
-.div_Cabecalhocoluna3{
-    width: 20%;
-}
-.div_Cabecalhocoluna4{
-    width: 15%;
-}
-.div_Cabecalhocoluna5{
-    width: 10%;
-}
-
-.div_corpoGrid{
-    display: flex;
-    justify-content:flex-start;
-    align-items: center;
-    flex-direction: column;
-    border: 1px solid var(--titulorodapeFormGrid);
-    width: 100%;
-    height: 47.5vh;
-}
-.div_dadosGrid{
-    display: flex;
-    justify-content:flex-start;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    padding: 10px;
-    font-size: 25px;
-}
-.linhaGrid:nth-child(odd){
-    background-color: #eee;
+    width: 800px;
+    height: 50vh;  
+    border-radius: 25px;
+    background-image: radial-gradient(circle, var(--corfundo), rgba(0, 0, 0, 0.15), var(--corfundo),var(--titulorodapeFormGrid), var(--corfundo));
 
 }
-.linhaGrid:nth-child(even){
-    background-color: #ccc;
+.div_fundoGradiente h4{
+    font-size: 3em;
+    color: orange;
+    text-shadow: 2px 2px 4px #000000;
 }
-.linhaGrid:hover{
-    background-color: #088 !important;
-    color: #fff !important;
-}
-
-.div_dadocoluna1{
-    width: 25%;
-}
-.div_dadocoluna2{
-    width: 30%;
-}
-.div_dadocoluna3{
-    width: 20%;
-}
-.div_dadocoluna4{
-    display: flex;
-    justify-content:flex-start;
-    align-items: center;
-    flex-direction: row;
-    width: 15%;
-    padding-left: 10px;
-}
-.div_dadocoluna4 img{
-    padding-left: 20px;
-    cursor: pointer;
-}
-
-.div_dadocoluna5{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    flex-direction: row;
-}
-.div_dadocoluna5 img{
-    width: 30px;
-    margin-left: 5px;
-    margin-right: 5px;
-    cursor: pointer;
-}
-
-.div_rodapeGrid{
-    background-color: var(--titulorodapeFormGrid);
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    flex-direction: row;
-    background-color: var(--titulorodapeFormGrid);
-    border-radius:0px 0px 25px 25px;
-    padding: 21px;
-}
-/* FIM  PAGINA DE CADASTRO DE USUÁRIOS */
-div_campoForm2
-
-/* INICIO PAGINA DE CADASTRO DE PUBLICAÇÕES */
-.div_frameCadastroPublicacoes{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    height: 65vh;
-}
-
-.sessao_cadastroPublicacoes{
-    width: 100%;
-    height: 65vh;
-}
-
-.div_tituloFormularioPublicacoes{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    border-radius: 25px 25px 0px 0px;
-    background-color: var(--titulorodapeFormGrid);
-}
-.div_tituloFormularioPublicacoes h1,h2{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 5px;
-}
-
-.div_formularioPublicacoes{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 429px;
-    border: 1px solid var(--titulorodapeFormGrid);
-
-}
-.div_formularioPublicacoes form{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-}
-
-.div_banner, .div_imagem{
-    width: 130px;
-    height: 120px;
-    border: 1px solid #000;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-}
-.div_campoFormInput{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-}
-
-.div_rodapeFormularioPublicacoes{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0px 0px 25px 25px;
-    background-color: var(--titulorodapeFormGrid);
-    width: 100%;
-    padding: 12px;
-}
-.div_rodapeFormularioPublicacoes button a{
-    text-decoration: none;
-    color: #000;
-}
-.div_rodapeFormularioPublicacoes button a:hover{
-	background-color:#c22;
-	color:#fff;
-}
-
-.sessao_grid{
-    width: 100%;
-    height: 65vh;
-}
-
-.div_tituloGrid{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--titulorodapeFormGrid);
-    border-radius: 25px 25px 0px 0px;
-}
-
-.div_cabecalhoGrid{
-    display: flex;
-    justify-content:flex-start;
-    align-items: center;
-    flex-direction: row;
-    padding: 10px;
-    background-color: var(--titulorodapeFormGrid);
-    color: #fff;    
-    font-size: 20px;
-}
-.div_Cabecalhocoluna1{
-    width: 25%;
-}
-.div_Cabecalhocoluna2{
-    width: 30%;
-}
-.div_Cabecalhocoluna3{
-    width: 20%;
-}
-.div_Cabecalhocoluna4{
-    width: 15%;
-}
-.div_Cabecalhocoluna5{
-    width: 10%;
-}
-
-.div_corpoGrid{
-    display: flex;
-    justify-content:flex-start;
-    align-items: center;
-    flex-direction: column;
-    border: 1px solid var(--titulorodapeFormGrid);
-    width: 100%;
-    height: 47.5vh;
-}
-.div_dadosGrid{
-    display: flex;
-    justify-content:flex-start;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    padding: 10px;
-    font-size: 25px;
-}
-.linhaGrid:nth-child(odd){
-    background-color: #eee;
-
-}
-.linhaGrid:nth-child(even){
-    background-color: #ccc;
-}
-.linhaGrid:hover{
-    background-color: #088 !important;
-    color: #fff !important;
-}
-
-.div_dadocoluna1{
-    width: 25%;
-}
-.div_dadocoluna2{
-    width: 30%;
-}
-.div_dadocoluna3{
-    width: 20%;
-}
-.div_dadocoluna4{
-    display: flex;
-    justify-content:flex-start;
-    align-items: center;
-    flex-direction: row;
-    width: 15%;
-    padding-left: 10px;
-}
-.div_dadocoluna4 img{
-    padding-left: 20px;
-    cursor: pointer;
-}
-
-.div_dadocoluna5{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    flex-direction: row;
-}
-.div_dadocoluna5 img{
-    width: 30px;
-    margin-left: 5px;
-    margin-right: 5px;
-    cursor: pointer;
-}
-
-.div_rodapeGrid{
-    background-color: var(--titulorodapeFormGrid);
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    flex-direction: row;
-    background-color: var(--titulorodapeFormGrid);
-    border-radius:0px 0px 25px 25px;
-    padding: 21px;
-}
-
-.sessao_gridPublicacoes{
-    width: 100%;
-
-    /* border: 1px solid #000; */
-}
-
-/* .div_cabecalhoGrid{
-    display: flex;
-    justify-content:flex-start;
-    align-items: center;
-    flex-direction: row;
-    padding: 10px;
-    background-color: var(--titulorodapeFormGrid);
-    color: #fff;    
-    font-size: 20px;
-} */
-.div_Cabecalhocoluna1Publicacoes{
-    width: 60%;
-}
-.div_Cabecalhocoluna2Publicacoes{
-    width: 15%;
-}
-.div_Cabecalhocoluna3Publicacoes{
-    width: 15%;
-}
-.div_Cabecalhocoluna4Publicacoes{
-    width: 15%;
-}
-.div_Cabecalhocoluna5Publicacoes{
-    width: 10%;
-}
-
-.div_dadocoluna1Publicacoes{
-    width: 60%;
-}
-.div_dadocoluna2Publicacoes{
-    width: 15%;
-}
-.div_dadocoluna3Publicacoes{
-    width: 15%;
-}
-.div_dadocoluna4Publicacoes{
-    display: flex;
-    justify-content:flex-start;
-    align-items: center;
-    flex-direction: row;
-    width: 15%;
-    padding-left: 10px;
-}
-.div_dadocoluna4Publicacoes img{
-    padding-left: 20px;
-    cursor: pointer;
-}
-
-.div_dadocoluna5Publicacoes{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    flex-direction: row;
-    width: 10%;
-}
-.div_dadocoluna5Publicacoes img{
-    width: 30px;
-    margin-left: 5px;
-    margin-right: 5px;
-    cursor: pointer;
-}
-
-
-/* FIM  PAGINA DE CADASTRO DE PUBLICAÇÕES */
-
-
+/* FIM PAGINA DE ADMINISTRAÇÃO */
