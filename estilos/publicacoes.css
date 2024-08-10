@@ -253,5 +253,44 @@
     margin-right: 5px;
     cursor: pointer;
 }
-
 /* FIM  PAGINA DE CADASTRO DE PUBLICAÇÕES */
+
+/* INICIO PAGINA DE PUBLICAÇÕES */
+.article_publicacao{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #000;
+
+}
+.div_imagemBanner{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    /* width: 500px;
+    height: 30vh; */
+
+    /* border: 1px solid #800; */
+
+}
+.div_imagemBanner img{
+    width: 400px;
+    border-radius: 10px;
+
+
+}
+.div_imagemBanner label{
+font-size: 2em;
+
+}
+.div_textoPrincipal{
+    padding: 10px;
+    font-size: 2em;
+}
+/* FIM PAGINA DE PUBLICAÇÕES */
