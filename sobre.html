@@ -5,43 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <title>Parôquia Nsa. Remédios</title>
-    <link rel="stylesheet" type="text/css" href="estilos70.css" />  
+    <link rel="stylesheet" type="text/css" href="estilos/estilos.css" />  
 </head>
 <body>
     <!--Cabeçalho-->
     <header>
         <!--Primeiro Menu-->
-        <div>
-            <nav class="menu1">
+        <div class="div_menu1">
+            <nav>
                 <ul>
                     <li><a href="#"> Confissões </a></li>
+                    <li><a href="#"> Orações </a></li>
                     <li><a href="#"> Liturgia Diária </a></li>
                     <li><a href="catequese_permanente.html"> Catequese Permanente </a></li>
-                    <li><a href="#"> Pedidos de Oração </a></li>
-                    <li><a href="#"> Orações </a></li>
+                    <li><a href="#sessao_oracoes"> Pedidos de Oração </a></li>
                     <li><a href="login.html">Área Restrita</a></li>
                 </ul>
             </nav>
         </div>
 
         <!--Meio do Cabeçalho = Brasões e Nome Da Parôquia e  e -->
-        <div>
+        <div class="div_logo">
            <img id="logo_diocese" src="imagens\brasaodiocese.png">
             <img id="logo_paroquia" src="imagens\brasaoparoquia.png">
             <img id="nome_paroquia" src="imagens\topodapagina.png">
          </div>
 
         <!--Segundo Menu-->
-        <div>
-            <nav class="menu2">
-                <li><a href="index.html"> HOME </a></li>
-                <li><a href="pagina_em_desenvolvimento.html"> A PARÔQUIA </a></li>
-                <li><a href="pagina_em_desenvolvimento.html"> CALENDÁRIO </a></li>
-                <li><a href="pagina_em_desenvolvimento.html"> PASTORAIS </a></li>
-                <li><a href="pagina_em_desenvolvimento.html"> MOVIMENTOS </a></li>
-                <li><a href="pagina_em_desenvolvimento.html"> SECRETARIA </a></li>
-                <li><a href="pagina_em_desenvolvimento.html"> CONTATOS </a></li>
-                <li><a href="sobre.html"> SOBRE </a></li>
+        <div  class="div_menu2">
+            <nav>
+                <ul>
+                    <li><a href="index.html"> HOME </a></li>
+                    <li><a href="pagina_em_desenvolvimento.html"> A PARÔQUIA </a></li>
+                    <li><a href="publicacoes.html"> NOTÍCIAS </a></li>
+                    <li><a href="pagina_em_desenvolvimento.html"> PASTORAIS </a></li>
+                    <li><a href="pagina_em_desenvolvimento.html"> MOVIMENTOS </a></li>
+                    <li><a href="pagina_em_desenvolvimento.html"> SECRETARIA </a></li>
+                    <li><a href="pagina_em_desenvolvimento.html"> CONTATOS </a></li>
+                    <li><a href="sobre.html"> SOBRE </a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -49,36 +51,106 @@
     <main>
         <!--Breve Biografia-->
         <section id= "biografia" class="biografia">
-            <h5>******************************************************************************************************************</h5>
-            <strong>CLAUDIO TADEU SEVERINO</strong> <br>
-            <h5>******************************************************************************************************************</h5>
-            <big>DADOS PESSOAIS</big> <br>
-            <h5>51 Anos - Nascido em São Paulo - Capital </h5>
-            <h5>Residente de Paracuru desde 2017 </h5>
-            <h5>******************************************************************************************************************</h5>
-            <big>FORMAÇÃO ACADÊMICA</big> <br>
-            <h5>Cursou Primeiro Grau em São Paulo Capital - Escola Pública </h5>
-            <h5>Cursou Segundo Grau em Caieiras - SP </h5>
-            <h5>Cursou Informatica Basica - DOS - WINDOWS - WORD - EXCEL - POWER POINT ACCESS em  Franco da Rocha - SP </h5>
-            <h5>Cursou Corel Draw em Franco da Rocha - SP </h5>
-            <h5>Cursou Montagem e Manutenção de Computadores em Franco da Rocha - SP </h5>
-            <h5>Cursou Redes de Computadores - Senac - Fortaleza </h5>
-            <h5>Cursou Programação Delphi - Básico, Intermediário e Avançado - Fortaleza</h5>
-            <h5>Cursou Oracle - Basico e Intermediário - Foraleza - Ce</h5>
-            <h5>Cursou Superior até o Terceiro Semestre - FIC - Fortaleza - Projeto e Desenvolvimento de Softwares </h5>
-            <h5>Cursou HTML5- EAD - CFB Cursos </h5>
-            <h5>Cursou PhotoShop- EAD - CFB Cursos </h5>
-            <h5>Cursa PHP- EAD - CFB Cursos </h5>
-            <h5>Cursa JavaScript EAD - CFB Cursos </h5>
-            <h5>Cursa Informática Para Web - IFCE - Paracuru - Ce </h5>
-            <h5>******************************************************************************************************************</h5>
-            <big>ATUAÇÃO PROFISSIONAL</big> <br>
-            <h5>Atualmente Trabalha como Programador</h5>
-            <h5>Prefeitura Municipal de Paracuru</h5> 
-            <h5>Lotado Pela Controladoria Geral do Município</h5>
-            <h5>Responsável Pela Manutenção do Site</h5>
-            <h5>Portal da Transparência</h5>
-            <h5>******************************************************************************************************************</h5>
+            <div class="div_tituloBibliografia displyFlexSpaceBetweenRow">
+                <h1>BIOGRAFIA</h1>
+            </div>
+
+            <div class="div_corpoBografia displyFlexSpaceBetweenRow">
+                <div>
+                    <img src="fotos/Claudio3.png" alt="">
+                </div>
+                <div class="div_dados displyFlexSpaceBetweenRow ">
+                    <h2>AUTOR</h2>
+                    <h1>CLAUDIO TADEU SEVERINO</h1>
+                    <div class="div_dadosPessais displyFlexSpaceBetweenRow">
+                        <div><h2>DADOS PESSOAIS</h2></div>
+                        <div class="displyFlexSpaceBetweenRow">
+                            <h3>51 Anos - Nascido em São Paulo - Capital </h3>
+                            <h3>Residente de Paracuru desde 2017 </h3>
+                        </div>
+                    </div>
+
+                    <div class="div_dados div_formaçãoAcademica displyFlexSpaceBetweenRow">
+                        <div><h2>FORMAÇÃO ACADÊMICA</h2></div>
+                        <div class="displyFlexSpaceBetweenRow">
+                            <h3>Cursou Primeiro Grau em São Paulo Capital - Escola Pública</h3>
+                            <h3>Cursou Segundo Grau em Caieiras - SP - Escola Pública</h3>
+                            <h3>Cursou Analise, Projeto e Desenvolvimento de Sofwares - FIC - Fortaleza - Ce</h3>
+                            <h3>Cursa Informática Para Web - IFCE - Paracuru - Ce</h3>
+                        </div>
+                    </div>
+
+                    <div class="div_dados div_cursosTecnicos displyFlexSpaceBetweenRow">
+                        <div><h2>CURSOS TÉCNICOS</h2></div>
+                        <div class="div_dados displyFlexSpaceBetweenRow">
+                            <h3>Informatica Basica - DOS - WINDOWS - WORD - EXCEL - POWER POINT ACCESS em  Franco da Rocha - SP</h3>
+                            <h3>Corel Draw em Franco da Rocha - SP</h3>
+                            <h3>Montagem e Manutenção de Computadores em Franco da Rocha - SP</h3>
+                            <h3>Auxiliar Administrativo - Franco da Rocha - SP</h3>
+                            <h3>Redes de Computadores - Senac - Fortaleza - Ce</h3>
+                            <h3>Programação Delphi - Básico, Intermediário e Avançado - Fortaleza - Ce</h3>
+                            <h3>SQL-Server - Fortaleza - Ce</h3>
+                            <h3>Oracle - Basico e Intermediário - Fortaleza - Ce</h3>
+                            <h3>Empreendedorismo - Senac - Fortaleza - Ce</h3>
+                            <h3>PhotoShop- EAD - CFB Cursos</h3>
+                            <h3>HTML5- EAD - CFB Cursos</h3>
+                            <h3>CSS - EAD - CFB Cursos</h3>
+                            <h3>PHP - EAD - CFB Cursos</h3>
+                            <h3>JavaScript EAD - CFB Cursos</h3>
+                            <h3>Typescript - EAD - CFB Cursos</h3>
+                            <h3>React Next - EAD - CFB Cursos</h3>
+                            <h3>Node Red - EAD - CFB Cursos</h3>
+                            <h3>NodeJs - EAD - CFB Cursos</h3>
+                            <h3>Git / Git Hub - EAD - Curso em Vídeo</h3>
+                        </div>
+                    </div>
+    
+                    <div class="div_dados div_AtuacaoProfissional displyFlexSpaceBetweenRow">
+                        <div><h2>ATUAÇÃO PROFISSIONAL</h2></div>
+                        <div  class="displyFlexSpaceBetweenRow">
+                            <h2>Atualmente Trabalha:</h2>
+                            <div class="div_dados displyFlexSpaceBetweenRow">
+                                <h3>Desenvolvedor de Sistemas - Free-Lancer</h3>
+                                <h3>DPO - Encarregado de Dados - Controladoria - Prefeitura de Paracuru</h3>
+                                <h3>Manutenção do Site da Prefeitura - Portal da Transparência</h3>
+                                
+                            </div>
+
+    
+                            <h2>Experiências Ateriores:</h2>
+
+                            <div class="div_dados displyFlexSpaceBetweenRow">
+                                <h3>Sócio Administrador</h3>
+                                <h3>Beach Burguer - Hamburgueria Artezanal</h3>
+                            </div>
+                            <div class="div_dados displyFlexSpaceBetweenRow">
+                                <h3>Sócio Administrador</h3>
+                                <h3>MacroSoft Soluções em Sistemas</h3>
+                                <h3>Automação Comercial - Bares, Restaurantes, Pizzarias e Similares</h3>
+                            </div>
+                            <div class="div_dados displyFlexSpaceBetweenRow">
+                                <h3>Programador Junior</h3>
+                                <h3>IDEM - Istituto de Desenvolvimento Educacional - MA</h3>
+                                <h3>Desenvolver Soluções para Sistema Acadêmico</h3>
+                            </div>
+                            <div class="div_dados displyFlexSpaceBetweenRow">
+                                <h3>Programador Junior</h3>
+                                <h3>Solução Sistema</h3>
+                                <h3>Desenvolver Soluções para Sistema Acadêmico</h3>
+                            </div>
+                            <div class="div_dados displyFlexSpaceBetweenRow">
+                                <h3>Técnico de Informática</h3>
+                                <h3>CFN - Companhia Ferroviária do Nordeste</h3>
+                                <h3>Manutenção no Sistema de Gerenciamento de Tráfego de Trens</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="div_rodapeBibliografia displyFlexSpaceBetweenRow">
+                <h1>Rodapé Biografia</h1>
+            </div>
+
         </section>
     </main>
 

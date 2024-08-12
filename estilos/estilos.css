@@ -26,6 +26,32 @@ body{
     background-color: var(--corfundo);
 }
 
+.displyFlexStarColumn{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.displyFlexStarRow{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+.displyFlexSpaceBetweenRow{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+.displyFlexSpaceBetweenRow{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
 .div_menu1{
     background-color: var(--corfundo);
 }
@@ -312,7 +338,6 @@ footer{
     border-radius: 0px 0px 10px 0px;
 }
 
-
 /* INICIO PAGINA DE LOGIN */
 .main_login{
     display: flex;
@@ -447,11 +472,6 @@ footer{
     width: 15%;
 }
 
-.div_logofConfiguracao{
-    /* border: 1px solid #000; */
-
-}
-
 .div_framePrincipal{
     display: flex;
     justify-content: flex-start;
@@ -552,3 +572,39 @@ footer{
     text-shadow: 2px 2px 4px #000000;
 }
 /* FIM PAGINA DE ADMINISTRAÇÃO */
+
+/* INICIO DA PAGINA SOBRE */
+
+.div_tituloBibliografia{
+    padding: 10px;
+    background-color: var(--titulorodapeFormGrid);
+    color: #fff;
+    border-radius: 20px 20px 0px 0px;
+
+    /* border:  1px solid #800; */
+}
+.div_tituloBibliografia h1{
+    padding: 5px;
+    font-size: 2em;
+
+}
+.div_corpoBografia{
+    border: 1px solid var(--titulorodapeFormGrid);
+}
+.div_dados{
+    margin: 10px;
+    
+    /* border: 1px solid #008; */
+}
+.div_dados h2{
+    margin: 10px;
+}
+
+.div_rodapeBibliografia{
+    padding: 10px;
+    background-color: var(--titulorodapeFormGrid);
+    color: #fff;
+    border-radius: 0px 0px 20px 20px;
+
+}
+/* FIM DA PAGINA SOBRE */
