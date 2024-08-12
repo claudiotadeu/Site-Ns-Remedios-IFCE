@@ -326,6 +326,39 @@ body{
     margin: 50px;
 }
 
+.sessao_patrocinadores{
+    /* border: 1px solid #000; */
+}
+.div_patrocinio{
+    width: 15%;
+    padding: 20px;
+    border-radius: 25px;
+    color: #fff;
+
+    background-color: red;
+    position: relative;
+    animation-name: patrocinio;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+  
+    border: 1px solid #800;
+    
+}
+@keyframes patrocinio {
+    0%   {background-color:red; left:0px; top:0px;}
+    10%  {background-color:yellow; left:20%; top:0px;}
+    20%  {background-color:blue; left:40%; top:0px;}
+    30%  {background-color:green; left:60%; top:0px;}
+    40% {background-color:red; left:80%; top:0px;}
+    50%  {background-color:black; left:85%; top:0px;}
+    60%  {background-color:green; left:80%; top:0px;}
+    70%  {background-color:blue; left:60%; top:0px;}
+    80%  {background-color:green; left:40%; top:0px;}
+    90%  {background-color:yellow; left:20%; top:0px;}
+    100%  {background-color:red; left:0%; top:0px;}
+  }
+  
+
 footer{
     display: flex;
     justify-content: center;
@@ -590,6 +623,11 @@ footer{
 }
 .div_corpoBografia{
     border: 1px solid var(--titulorodapeFormGrid);
+}
+.div_foto img{
+    padding: 10px;
+    border-radius: 100%;
+
 }
 .div_dados{
     margin: 10px;
