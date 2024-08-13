@@ -632,7 +632,6 @@ footer{
 .div_dados{
     margin: 10px;
     
-    /* border: 1px solid #008; */
 }
 .div_dados h2{
     margin: 10px;
@@ -646,3 +645,116 @@ footer{
 
 }
 /* FIM DA PAGINA SOBRE */
+
+/* INICIO DA PAGINA CONTATOS */
+.sessao_contatos{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 71vh;
+    padding: 10px;
+    
+
+    /* border: 1px solid #008; */
+}
+
+.div_formularioEmail{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    /* border: 1px solid #000; */
+
+}
+
+.div_tituloFormularioEmail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    border-radius: 25px 25px 0px 0px;
+    background-color: var(--titulorodapeFormGrid);
+}
+.div_tituloFormularioEmail h1,h2{
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    padding: 5px;
+}
+
+.div_corpoFormularioEmail form{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    /* width: 100%; */
+    width: 400px;
+    height: 429px;
+    border: 1px solid var(--titulorodapeFormGrid);
+}
+
+.div_campoFormulario{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 5px;
+    margin: 10px;
+    font-size: 20px;
+
+    /* border: 1px solid var(--titulorodapeFormGrid); */
+}
+.div_campoFormulario label,input,textarea{
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+}
+.div_campoFormulario input,textarea{
+    background-color: #eee;
+    padding: 10px;
+}
+
+.div_rodapeFormularioEmail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 25px 25px;
+    background-color: var(--titulorodapeFormGrid);
+    width: 400px;
+    padding: 12px;
+}
+.div_rodapeFormularioEmail button a{
+    text-decoration: none;
+    color: #000;
+}
+.div_rodapeFormularioEmail button a:hover{
+	background-color:#c22;
+	color:#fff;
+}
+
+.div_redesSocial{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+
+
+
+    /* border: 1px solid #000; */
+
+}
+.div_campoRedeSocial{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+
+    /* border: 1px solid #000; */
+}
+.div_campoRedeSocial img{
+    width: 100%;
+    border-radius: 100%;
+    cursor: pointer;
+}
