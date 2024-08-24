@@ -52,7 +52,7 @@
     <main class="main_administracao">
         <div class="div_tituloAdministracao">
             <div class="div_menuCadastroAdministracao">
-                <button><img src="/imagens/icons/menu.svg" alt="" title="Menu Lateral"></button>
+                <a href="administracao.html"><img src="/imagens/icons/left.svg" alt="" title="Voltar Para Pagina Administração"></a>
             </div>
 
             <div class="div_filtro">
@@ -60,20 +60,15 @@
                     <label for="input_filtroNome">Filtrar Por Nome:</label>
                 </div>
                 <input type="text" name="input_filtroNome" id="input_filtroNome">
-                <img src="imagens/icons/search.svg" alt="" title="filtrar Por Chamada">
-
             </div>
             <div class="div_logofConfiguracao">
+                <a href="#" target="_self"><img src="imagens/icons/search.svg" alt="" title="Pesquisar"></a>
+                <a href="#" target="_self"><img src="/imagens/icons/print.svg" alt="" title="Imprimir"></a>
                 <a href="login.html" target="_self"><img src="/imagens/icons/logout.svg" alt="" title="Efetuar Logof"></a>
                 <a href="pagina_em_desenvolvimento.html" target="_self"><img src="/imagens/icons/settings.svg" alt="" title="Configurações"></a>
             </div>
         </div>
         <div class="div_framePrincipal">
-            <div class="div_menuLateral">
-                <a href="administracao.html" target="_self">Administração</a>
-                <a href="cadastro_usuarios.html" target="_self">Usuários</a>
-                <a href="cadastro_pubicacoes.html" target="_self">Publicações</a>
-            </div>
             <div class="div_frame">
                 <!-- <iframe src="" frameborder="0"></iframe> -->
                  <div class="div_frameCadastroUsuarios">
@@ -121,9 +116,6 @@
                                     <div class="div_campoForm">
                                         <label for="f_foto">Foto</label>
                                         <input type="file" name="f_foto" id="f_foto">
-                                        <!-- <button class="botao_padrao"></button> -->
-
-                                        
                                     </div>
                                 </div>
                             </form>
@@ -146,67 +138,199 @@
                             <div class="div_Cabecalhocoluna5">Ação</div>
                         </div>
                         <div class="div_corpoGrid">
-                            <div class="div_dadosGrid linhaGrid">
-                                <div class="div_dadocoluna1">Claudio Tadeu</div>
-                                <div class="div_dadocoluna2">claudiotadeu@email.com</div>
-                                <div class="div_dadocoluna3">Master</div>
-                                <div class="div_dadocoluna4">
+                                <div>Claudio Tadeu</div>
+                                <div>claudiotadeu@email.com</div>
+                                <div>Master</div>
+                                <div class="div_tipoAcesso">
                                     <div>A</div>
                                     <div><img src="/imagens/icons/ativar.svg" alt=""></div>
-                                    </div>
-                                <div class="div_dadocoluna5">
+                                </div>
+                                <div class="div_acao">
                                     <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
                                     <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
                                     <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
                                 </div>
-                            </div>
-
-                            <div class="div_dadosGrid linhaGrid">
-                                <div class="div_dadocoluna1">João Maria</div>
-                                <div class="div_dadocoluna2">joaomaria@email.com</div>
-                                <div class="div_dadocoluna3">Digitador</div>
-                                <div class="div_dadocoluna4">
+                                <div>João Maria</div>
+                                <div>joaomaria@email.com</div>
+                                <div>Digitador</div>
+                                <div class="div_tipoAcesso">
                                     <div>A</div>
                                     <div><img src="/imagens/icons/ativar.svg" alt=""></div>
-                                    </div>
-                                <div class="div_dadocoluna5">
+                                </div>
+                                <div class="div_acao">
                                     <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
                                     <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
                                     <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
                                 </div>
-                            </div>
-
-                            <div class="div_dadosGrid linhaGrid">
-                                <div class="div_dadocoluna1">Rocicléia Moura</div>
-                                <div class="div_dadocoluna2">rocicleiamoura@gmail.com</div>
-                                <div class="div_dadocoluna3">Operador</div>
-                                <div class="div_dadocoluna4">
+                                <div>Rocicléia Moura</div>
+                                <div>rocicleiamoura@gmail.com</div>
+                                <div>Operador</div>
+                                <div class="div_tipoAcesso">
                                     <div>A</div>
                                     <div><img src="/imagens/icons/ativar.svg" alt=""></div>
-                                    </div>
-                                <div class="div_dadocoluna5">
+                                </div>
+                                <div class="div_acao">
                                     <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
                                     <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
                                     <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
                                 </div>
-                            </div>
-
-                            <div class="div_dadosGrid linhaGrid">
-                                <div class="div_dadocoluna1">José Virgulino</div>
-                                <div class="div_dadocoluna2">lampiao@email.com</div>
-                                <div class="div_dadocoluna3">Gerente</div>
-                                <div class="div_dadocoluna4">
+                                <div>José Virgulino</div>
+                                <div>lampiao@email.com</div>
+                                <div>Gerente</div>
+                                <div class="div_tipoAcesso">
                                     <div>A</div>
-                                    <div><img src="/imagens/icons/desativar.svg" alt=""></div>
-                                    </div>
-                                <div class="div_dadocoluna5">
+                                    <div><img src="/imagens/icons/ativar.svg" alt=""></div>
+                                </div>
+                                <div class="div_acao">
                                     <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
                                     <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
                                     <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
                                 </div>
-                            </div>
+                                <div>Claudio Tadeu</div>
+                                <div>claudiotadeu@email.com</div>
+                                <div>Master</div>
+                                <div class="div_tipoAcesso">
+                                    <div>A</div>
+                                    <div><img src="/imagens/icons/ativar.svg" alt=""></div>
+                                </div>
+                                <div class="div_acao">
+                                    <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
+                                    <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
+                                    <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
+                                </div>
+                                <div>João Maria</div>
+                                <div>joaomaria@email.com</div>
+                                <div>Digitador</div>
+                                <div class="div_tipoAcesso">
+                                    <div>A</div>
+                                    <div><img src="/imagens/icons/ativar.svg" alt=""></div>
+                                </div>
+                                <div class="div_acao">
+                                    <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
+                                    <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
+                                    <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
+                                </div>
+                                <div>Rocicléia Moura</div>
+                                <div>rocicleiamoura@gmail.com</div>
+                                <div>Operador</div>
+                                <div class="div_tipoAcesso">
+                                    <div>A</div>
+                                    <div><img src="/imagens/icons/ativar.svg" alt=""></div>
+                                </div>
+                                <div class="div_acao">
+                                    <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
+                                    <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
+                                    <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
+                                </div>
+                                <div>José Virgulino</div>
+                                <div>lampiao@email.com</div>
+                                <div>Gerente</div>
+                                <div class="div_tipoAcesso">
+                                    <div>A</div>
+                                    <div><img src="/imagens/icons/ativar.svg" alt=""></div>
+                                </div>
+                                <div class="div_acao">
+                                    <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
+                                    <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
+                                    <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
+                                </div>
+                                <div>Claudio Tadeu</div>
+                                <div>claudiotadeu@email.com</div>
+                                <div>Master</div>
+                                <div class="div_tipoAcesso">
+                                    <div>A</div>
+                                    <div><img src="/imagens/icons/ativar.svg" alt=""></div>
+                                </div>
+                                <div class="div_acao">
+                                    <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
+                                    <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
+                                    <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
+                                </div>
+                                <div>João Maria</div>
+                                <div>joaomaria@email.com</div>
+                                <div>Digitador</div>
+                                <div class="div_tipoAcesso">
+                                    <div>A</div>
+                                    <div><img src="/imagens/icons/ativar.svg" alt=""></div>
+                                </div>
+                                <div class="div_acao">
+                                    <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
+                                    <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
+                                    <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
+                                </div>
+                                <div>Rocicléia Moura</div>
+                                <div>rocicleiamoura@gmail.com</div>
+                                <div>Operador</div>
+                                <div class="div_tipoAcesso">
+                                    <div>A</div>
+                                    <div><img src="/imagens/icons/ativar.svg" alt=""></div>
+                                </div>
+                                <div class="div_acao">
+                                    <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
+                                    <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
+                                    <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
+                                </div>
+                                <div>José Virgulino</div>
+                                <div>lampiao@email.com</div>
+                                <div>Gerente</div>
+                                <div class="div_tipoAcesso">
+                                    <div>A</div>
+                                    <div><img src="/imagens/icons/ativar.svg" alt=""></div>
+                                </div>
+                                <div class="div_acao">
+                                    <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
+                                    <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
+                                    <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
+                                </div>
+                                <div>Claudio Tadeu</div>
+                                <div>claudiotadeu@email.com</div>
+                                <div>Master</div>
+                                <div class="div_tipoAcesso">
+                                    <div>A</div>
+                                    <div><img src="/imagens/icons/ativar.svg" alt=""></div>
+                                </div>
+                                <div class="div_acao">
+                                    <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
+                                    <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
+                                    <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
+                                </div>
+                                <div>João Maria</div>
+                                <div>joaomaria@email.com</div>
+                                <div>Digitador</div>
+                                <div class="div_tipoAcesso">
+                                    <div>A</div>
+                                    <div><img src="/imagens/icons/ativar.svg" alt=""></div>
+                                </div>
+                                <div class="div_acao">
+                                    <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
+                                    <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
+                                    <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
+                                </div>
+                                <div>Rocicléia Moura</div>
+                                <div>rocicleiamoura@gmail.com</div>
+                                <div>Operador</div>
+                                <div class="div_tipoAcesso">
+                                    <div>A</div>
+                                    <div><img src="/imagens/icons/ativar.svg" alt=""></div>
+                                </div>
+                                <div class="div_acao">
+                                    <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
+                                    <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
+                                    <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
+                                </div>
+                                <div>José Virgulino</div>
+                                <div>lampiao@email.com</div>
+                                <div>Gerente</div>
+                                <div class="div_tipoAcesso">
+                                    <div>A</div>
+                                    <div><img src="/imagens/icons/ativar.svg" alt=""></div>
+                                </div>
+                                <div class="div_acao">
+                                    <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
+                                    <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
+                                    <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
+                                </div>
                         </div>
-
                         <div class="div_rodapeGrid">
                             <h3>Total de Registros: 04</h3>
                             <h3>Qtde de Registros Ativos: 03</h3>
@@ -214,7 +338,6 @@
                         </div>
                     </section>
                  </div>
-
             </div>
         </div>
     </main>

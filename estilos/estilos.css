@@ -9,16 +9,20 @@ html{
 }
 
 :root{
+    --corheader: #ffffcc;
     --titulorodapeFormGrid: #005288;
     --cinzamedio: #ccc;
     --corfundo:  #ffffcc;
+    --corfontemenuheader: #248;
+    --cortexto: #000000;
+    --cormenuhover: #800;
 }
 
 header{
     background-color: var(--corfundo);
 	padding:  0px 5px;
 	width: 100%;
-	color: #ffffcc;
+	color:  var(--corheader);
     position: sticky;
     top: 0;
 }
@@ -67,12 +71,11 @@ body{
     text-decoration: none;
     padding-right: 5px;
     padding-left: 5px;
-    color: #248;
-    text-shadow: 3px 3px 6px #000000;
-
+    color: var(--corfontemenuheader);
+    text-shadow: var(--cortexto);
 }
 .div_menu1 nav ul li a:hover{
-    color: #800;
+    color: var(--cortexto);
 }
 
 .div_logo{
@@ -99,11 +102,11 @@ body{
     text-decoration: none;
     padding-right: 5px;
     padding-left: 5px;
-    color: #248;
-    text-shadow: 3px 3px 6px #000000;
+    color: var(--corfontemenuheader);
+    text-shadow: var(--cortexto);
 }
 .div_menu2 nav ul a:hover{
-    color: #800;
+    color: var(--cortexto);
     background-color: #bbb;
     padding: 5px;
     border-radius: 5px;
@@ -262,7 +265,7 @@ body{
 	height:30px;
 	margin: 5px;
 	padding: 5px;
-	background-color:#248;
+    background-color: var(--corfontemenuheader);
 	border-radius:10px;
 	color:#000;
 	font-family:Arial bold;
@@ -278,7 +281,6 @@ body{
 	background-color:#c22;
 	color:#fff;
 }
-
 
 .div_Publicacoes{
     display: flex;
@@ -326,23 +328,16 @@ body{
     margin: 50px;
 }
 
-.sessao_patrocinadores{
-    /* border: 1px solid #000; */
-}
 .div_patrocinio{
     width: 15%;
     padding: 20px;
     border-radius: 25px;
     color: #fff;
-
     background-color: red;
     position: relative;
     animation-name: patrocinio;
     animation-duration: 40s;
     animation-iteration-count: infinite;
-  
-    border: 1px solid #800;
-    
 }
 @keyframes patrocinio {
     0%   {background-color:red; left:0px; top:0px;}
@@ -357,18 +352,17 @@ body{
     90%  {background-color:yellow; left:20%; top:0px;}
     100%  {background-color:red; left:0%; top:0px;}
   }
-  
 
 footer{
     display: flex;
     justify-content: center;
     align-items: center;
-	/* margin-bottom: 0px; */
 	background:#222;
 	padding:10px 10px;
     color: #fff;
     font-size: 20px;
-    border-radius: 0px 0px 10px 0px;
+    border-radius: 0px 0px 10px 10px;
+    margin-bottom: 0px;
 }
 
 /* INICIO PAGINA DE LOGIN */
@@ -428,7 +422,6 @@ footer{
     font-size: 20px;
     border-radius: 8px;
     padding: 5px;
-    /* border-radius: 5px; */
 }
 
 .div_campoForm2{
@@ -438,7 +431,6 @@ footer{
     flex-direction: row;
     width: 100%;
     margin-top: 2px;
-    /* padding: 5px; */
 }
 .div_campoForm2 input{
     cursor: pointer;
@@ -466,7 +458,6 @@ footer{
 
 /* INICIO PAGINA DE ADMINISTRAÇÃO */
 .div_tituloAdministracao{
-    
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -478,14 +469,13 @@ footer{
     margin-left: 10px;
     margin-right: 5px;
 }
-.div_menuCadastroAdministracao{
-    margin-left: 5px;
-    margin-top: 5px;
+.div_menuCadastroAdministracao img{
+    width: 100%;
+    cursor: pointer;    
 }
 .div_menuCadastroAdministracao button{
     cursor: pointer;
 }
-
 
 .div_filtro{
     display: flex;
@@ -493,12 +483,10 @@ footer{
     flex-direction: row;
     align-items: center;
     width: 30%;
-    /* border: 1px solid #000; */
 }
 .div_filtro label{
     width: 200px;
     font-size: 20px;
-    /* border: 1px solid #000; */
 }
 .div_filtro img{
     cursor: pointer;
@@ -515,24 +503,25 @@ footer{
 
 .div_frame{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    flex-direction: column;
     width: 100%;
 }
 
+/* INICIO PAGINA DE ADMINISTRAÇÃO */
 .div_menuLateral{
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    width: 200px;
-    /* height: 100vh; */
+    width: 300px;
     padding: 10px;
+    padding: 30px;
     border-radius: 0px 15px 15px 0px;
     background-color: #ccc;
     font-size: 20px;
     color: #000;
 }
+
 .div_menuLateral a{
     text-decoration: none;
     margin-bottom: 5px;
@@ -548,6 +537,23 @@ footer{
 
 .div_menuLateral h3{
     margin-bottom: 10px;
+}
+.div_menuLateral summary{
+    font-weight: bold;
+}
+.div_menuLateral a{
+    margin-left: 35px;
+}
+
+.div_listaMenuLateral{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-left: 15px;
+}
+.div_listaMenuLateral a{
+    padding-bottom: 5px;
+    font-size: 20px;
 }
 
 .div_menuLateralAdministracao{
@@ -582,58 +588,58 @@ footer{
 .div_mensagemAdministracao{
     font-size: 3em;
     color: white;
-    text-shadow: 3px 8px 6px #000000;
-
+    text-shadow: var(--cortexto);
 }
-/* FIM PAGINA DE ADMINISTRAÇÃO */
 
-/* INICIO PAGINA DE ADMINISTRAÇÃO */
 .div_fundoGradiente{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     width: 800px;
-    height: 50vh;  
     border-radius: 25px;
     background-image: radial-gradient(circle, var(--corfundo), rgba(0, 0, 0, 0.15), var(--corfundo),var(--titulorodapeFormGrid), var(--corfundo));
-
 }
 .div_fundoGradiente h4{
     font-size: 3em;
     color: orange;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: var(--cortexto);
+
 }
 /* FIM PAGINA DE ADMINISTRAÇÃO */
 
 /* INICIO DA PAGINA SOBRE */
-
 .div_tituloBibliografia{
     padding: 10px;
     background-color: var(--titulorodapeFormGrid);
     color: #fff;
     border-radius: 20px 20px 0px 0px;
-
-    /* border:  1px solid #800; */
 }
 .div_tituloBibliografia h1{
     padding: 5px;
     font-size: 2em;
-
 }
+
 .div_corpoBografia{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px ;
+
     border: 1px solid var(--titulorodapeFormGrid);
 }
 .div_foto img{
     padding: 10px;
     border-radius: 100%;
+}
 
+.div_detailsBiografia{
+    margin-bottom: 10px;
 }
-.div_dados{
-    margin: 10px;
-    
+
+.div_dadosPessoais{
+    margin-left: 600px;
 }
-.div_dados h2{
+.div_dadosPessoais h2{
     margin: 10px;
 }
 
@@ -642,7 +648,6 @@ footer{
     background-color: var(--titulorodapeFormGrid);
     color: #fff;
     border-radius: 0px 0px 20px 20px;
-
 }
 /* FIM DA PAGINA SOBRE */
 
@@ -653,9 +658,6 @@ footer{
     align-items: center;
     height: 71vh;
     padding: 10px;
-    
-
-    /* border: 1px solid #008; */
 }
 
 .div_formularioEmail{
@@ -664,9 +666,6 @@ footer{
     align-items: center;
     flex-direction: column;
     width: 100%;
-
-    /* border: 1px solid #000; */
-
 }
 
 .div_tituloFormularioEmail{
@@ -689,7 +688,6 @@ footer{
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    /* width: 100%; */
     width: 400px;
     height: 429px;
     border: 1px solid var(--titulorodapeFormGrid);
@@ -704,8 +702,6 @@ footer{
     padding: 5px;
     margin: 10px;
     font-size: 20px;
-
-    /* border: 1px solid var(--titulorodapeFormGrid); */
 }
 .div_campoFormulario label,input,textarea{
     width: 100%;
@@ -740,21 +736,39 @@ footer{
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-
-
-
-    /* border: 1px solid #000; */
-
 }
 .div_campoRedeSocial{
     width: 100px;
     height: 100px;
     margin: 10px;
-
-    /* border: 1px solid #000; */
 }
 .div_campoRedeSocial img{
     width: 100%;
     border-radius: 100%;
     cursor: pointer;
+}
+
+.div_amarelo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: yellow;
+    width: 800px;
+    height: 50vh;
+}
+
+.div_vermelho{
+    background-color: red;
+    width: 200px;
+    height: 20vh;
+}
+.div_verde{
+    background-color: green;
+    width: 200px;
+    height: 20vh;
+}
+.div_azul{
+    background-color: blue;
+    width: 200px;
+    height: 20vh; 
 }

@@ -1,16 +1,20 @@
 /* INICIO PAGINA DE CADASTRO DE PUBLICAÇÕES */
+.div_menuCadastroAdministracao  img:hover ~ .div_menuLateral{
+    position: relative;
+    transform: translatey(0) scaley(1);
+    cursor: pointer;
+}
+
 .div_frameCadastroPublicacoes{
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    /* height: 65vh; */
 }
 
 .sessao_cadastroPublicacoes{
     width: 100%;
-    /* height: 65vh; */
 }
 
 .div_tituloFormularioPublicacoes{
@@ -34,9 +38,7 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 429px;
     border: 1px solid var(--titulorodapeFormGrid);
-
 }
 .div_formularioPublicacoes form{
     display: flex;
@@ -79,30 +81,60 @@
 	color:#fff;
 }
 
-.sessao_grid{
+/* INICIO GRID */
+.div_divisaoSessao{
     width: 100%;
-    height: 65vh;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
 }
 
-.div_tituloGrid{
+.div_consultar{
     display: flex;
-    justify-content:space-between;
+    justify-content: flex-start;
     align-items: center;
-    flex-direction: column;
-    background-color: var(--titulorodapeFormGrid);
-    border-radius: 25px 25px 0px 0px;
+    width: 13%;
+    font-size: 25px;
+}
+.div_consultar img{
+    width: 25%;
+    padding: 5px;
+    cursor: pointer;
 }
 
-.div_cabecalhoGridPublicacoes{
-    display: flex;
-    justify-content:flex-start;
-    align-items: center;
-    flex-direction: row;
-    padding: 15px;
-    background-color: var(--titulorodapeFormGrid);
+.sessao_listaPublicacoes{
+    width: 100%;
+}
+
+.table_grid{
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+.table_grid th{
     color: #fff;    
     font-size: 20px;
-    border-radius: 25px 25px 0px 0px;
+    padding: 15px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: var(--titulorodapeFormGrid);
+}
+
+.table_grid td{
+    font-size: 20px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.table_grid td div{
+    display: flex;
+    justify-content: space-around;
+}
+
+.table_grid td div img{
+    width: 60%;
+    cursor: pointer;
+}
+.div_imagemAtivo{
+    width: 50px;
 }
 .div_Cabecalhocoluna1{
     width: 25%;
@@ -127,7 +159,9 @@
     flex-direction: column;
     border: 1px solid var(--titulorodapeFormGrid);
     width: 100%;
-    height: 47.5vh;
+    height: 40.5vh;
+    overflow-y: scroll;
+
 }
 .div_dadosGrid{
     display: flex;
@@ -193,13 +227,14 @@
     flex-direction: row;
     background-color: var(--titulorodapeFormGrid);
     border-radius:0px 0px 25px 25px;
-    padding: 21px;
+    padding: 15px;
+    color: #fff;
+    font-size: 20px;
+
 }
 
 .sessao_gridPublicacoes{
     width: 100%;
-
-    /* border: 1px solid #000; */
 }
 
 .div_Cabecalhocoluna1Publicacoes{
@@ -265,7 +300,6 @@
     margin-bottom: 10px;
     border-radius: 10px;
     border: 1px solid #000;
-
 }
 .div_imagemBanner{
     display: flex;
@@ -273,21 +307,13 @@
     flex-direction: column;
     align-items: center;
     margin: 10px;
-    /* width: 500px;
-    height: 30vh; */
-
-    /* border: 1px solid #800; */
-
 }
 .div_imagemBanner img{
     width: 400px;
     border-radius: 10px;
-
-
 }
 .div_imagemBanner label{
 font-size: 2em;
-
 }
 .div_textoPrincipal{
     padding: 10px;
