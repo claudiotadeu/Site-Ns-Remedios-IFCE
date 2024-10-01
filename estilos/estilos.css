@@ -78,12 +78,30 @@ body{
     color: var(--cortexto);
 }
 
-.div_logo{
+.div_cabecalho{
     display: flex;
     justify-content:space-between;
     flex-direction: row;
     align-items: center;
     padding: 5px;
+}
+.div_logo{
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: row;
+    align-items: center;
+    width: 210px;
+    padding: 5px;
+}
+.div_titulo{
+    display: flex;
+    justify-content:space-around;
+    flex-direction: row;
+    align-items: center;
+    width: 85%;
+    padding: 5px;
+    font-size: 3em;
+    color: #000;
 }
 
 .div_menu2{
@@ -112,9 +130,49 @@ body{
     border-radius: 5px;
 }
 
+.menuPrincipalLateral{
+    display: none;
+    float: left;
+    background-color:rgba(0, 0, 0, 0.02);
+
+    img{
+        width: 40px;
+        cursor: pointer;
+    }
+    #rd_menu{
+        visibility: hidden;
+    }
+}
+.menuPrincipalLateral nav ul a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    margin: 10px;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #005288;
+}
+.menuPrincipalLateral nav ul a:hover{
+    background-color: rgba(0, 0, 0, 0.35);
+    color: #fff;
+} 
+
+@media screen and (max-width: 800px ){
+    .div_menu1, .div_menu2{
+        display: none;
+    }
+
+    .menuPrincipalLateral{
+        display: block;
+    }    
+}
+
 .sessao_ImagemFundo{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 	width: 100%;
 	height: 100vh;
 	overflow: hidden;	
@@ -146,8 +204,8 @@ body{
 .article_noticias{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
-    flex-direction: row;
     width: 100%;
 }
 .div_noticia{
@@ -155,6 +213,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    min-width: 200px;
     width: 25%;
 }
 .div_fotonoticia{
@@ -191,13 +250,6 @@ body{
     width: 30px;
 }
 
-.article_oracoes{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    align-items: center;
-
-}
 .div_tituloPedidosOracoes{
     display: flex;
     justify-content: space-around;
@@ -209,6 +261,15 @@ body{
     padding: 10px;
     border-radius: 15px 15px 0px 0px;
 }
+
+.article_oracoes{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
 .div_contatoOracoes{
     display: flex;
     justify-content: flex-start;
@@ -219,6 +280,7 @@ body{
     height: 100%;
     margin-left: 5px;
     margin-right: 5px;
+    min-width: 300px;
 }
 .div_contatoOracoes input{
     font-size: 20px;
@@ -227,6 +289,7 @@ body{
     border: #ddd;
     padding: 5px;
     width: 100%;
+    min-width: 300px;
 }
 
 .div_intencoes{
@@ -311,9 +374,11 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    width: 50%;
+    flex-wrap: wrap;
+    width: 100%;
 }
 .article_doacoes img{
+    min-width: 150px;
     margin: 50px;
 }
 
@@ -322,9 +387,11 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 50%;
 }
 .article_acoes img{
+    min-width: 200px;
     margin: 50px;
 }
 

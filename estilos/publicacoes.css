@@ -309,8 +309,10 @@
     margin: 10px;
 }
 .div_imagemBanner img{
-    width: 400px;
+    /* width: 400px; */
     border-radius: 10px;
+    float: left;
+    width: 100%;
 }
 .div_imagemBanner label{
 font-size: 2em;
@@ -318,5 +320,12 @@ font-size: 2em;
 .div_textoPrincipal{
     padding: 10px;
     font-size: 2em;
+}
+.div_textoPrincipal img{
+    border-radius: 10px;
+    float: left;
+    /* width: 100%; */
+    width: 400px;
+    margin-right: 1em;
 }
 /* FIM PAGINA DE PUBLICAÇÕES */
