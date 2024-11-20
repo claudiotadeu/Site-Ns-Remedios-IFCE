@@ -1,0 +1,14 @@
+{
+  "name": "site-ns-remedios-ifce",
+  "version": "1.0.0",
+  "description": "Site de Trabalho Desenvolvimento WEB IFCE",
+  "main": "index.ejs",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

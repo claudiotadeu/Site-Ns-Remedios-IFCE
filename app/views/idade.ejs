@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    Olá, <%= pessoa.nome %>! Você nasceu em <%= pessoa.ano %>. Tem <%= idade %>anos!
+    <%- include('cabecalho') %>
+    <p>Olá, <%= pessoa.nome %>!</p>
+    <p>Você nasceu em <%= idade %>. Tem <%= pessoa.ano %>anos!</p>
+    <p>Sua doação foi de: <%= pessoa.doacao %>.</p> 
+    <p>Saldo final de doações: <%= saldo %></p>
+     
 </body>
 </html>

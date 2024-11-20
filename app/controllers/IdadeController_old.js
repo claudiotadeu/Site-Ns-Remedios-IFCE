@@ -4,11 +4,13 @@ class IdadeController {
         let body = request.body;
         console.log('parsed', body);
 
-        let pessoa = new Pessoa(body.nome, parseInt(body['ano']));
+        let pessoa = new Pessoa(body.nome, parseInt(body['ano']), parseInt(body['doacao']));
 
         let idade = pessoa.getIdade();
 
-        response.render('idade', {pessoa: pessoa, idade});
+        let saldo = pessoa.getSaldo();
+
+        response.render('idade', {pessoa: pessoa, idade, saldo});
     }
 }
 
