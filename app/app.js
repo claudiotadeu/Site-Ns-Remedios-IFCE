@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 const pool = mysql.createPool({
     host: 'localhost',
     user: 'root',
-    database: 'test',
+    database: 'nsremedios',
     waitForConnections: true,
     connectionLimit: 10,
     maxIdle: 10, // max idle connections, the default value is the same as `connectionLimit`
@@ -47,6 +47,79 @@ app.post('/idade', (req, res) => {
     pessoaController.idade(req, res);
 });
 
+
+// app.get('/', (req, res) => {
+//     res.render('');
+// });
+
+app.get('/confissoes', (req, res) => {
+    res.render('confissoes');
+});
+
+app.get('/oracoes', (req, res) => {
+    res.render('oracoes');
+});
+
+app.get('/liturgiaDiaria', (req, res) => {
+    res.render('liturgiaDiaria');
+});
+
+app.get('/catequesePermante', (req, res) => {
+        res.render('catequesePermante');
+});
+
+// app.get('/pedidosOracao', (req, res) => {
+//     res.render('pedidosOracao');
+// });
+app.get('/areaRestrita', (req, res) => {
+    res.render('areaRestrita');
+});
+
+app.get('/index', (req, res) => {
+    res.render('index');
+});
+
+app.get('/paroquia', (req, res) => {
+    res.render('paroquia');
+});
+
+app.get('/noticias', (req, res) => {
+    res.render('noticias');
+});
+
+app.get('/pastorais', (req, res) => {
+    res.render('pastorais');
+});
+
+app.get('/movimentos', (req, res) => {
+    res.render('movimentos');
+});
+
+app.get('/secretaria', (req, res) => {
+    res.render('secretaria');
+});
+
+app.get('/contatos', (req, res) => {
+    res.render('contatos');
+});
+
+app.get('/sobre', (req, res) => {
+    res.render('sobre');
+})
+
+app.get('/desenvolvimento', (req, res) => {
+    res.render('desenvolvimento');
+})
+
+app.get('/admin', (req, res) => {
+    res.render('admin');
+});
+
+app.get('/publicacoes', (req, res) => {
+    res.render('publicacoes');
+});
+
+
 // Auxiliar login
 app.get('/login', (req, res) => {
     res.send(req.query);
@@ -54,11 +127,6 @@ app.get('/login', (req, res) => {
 app.post('/login', (req, res) => {
     usuarioController.login(req, res);
 });
-
-app.get('/sobre', () => {
-    res.render();
-})
-
 
 app.get('/pessoas', (req, res) => {
     pessoaController.listar(req, res);

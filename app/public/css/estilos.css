@@ -704,7 +704,7 @@ footer{
 }
 
 .div_dadosPessoais{
-    margin-left: 600px;
+    margin-left: 400px;
 }
 .div_dadosPessoais h2{
     margin: 10px;
@@ -756,7 +756,7 @@ footer{
     align-items: center;
     flex-direction: column;
     width: 400px;
-    height: 429px;
+    height: 360px;
     border: 1px solid var(--titulorodapeFormGrid);
 }
 

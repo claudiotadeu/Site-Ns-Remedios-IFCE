@@ -1,44 +1,167 @@
-<%- include('cabecalho') %>
-<form action="/idade" method="post">
-    <div>
-        <label>
-            <span>Nome</span>
-            <input name="nome" />
-        </label>
-        <label>
-            <span>Ano</span>
-            <input name="ano" type="number" />
-        </label>
-        <label>
-            <span>Doação</span>
-            <input name="doacao" type="number" />
-        </label>
-    </div>
-    <!-- <%
-    for (let i = 0; i < 5; i++) {
-        if (i == 5) {
-            continue;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .maior{
+            color: green;
         }
-    _%>
-        <div>
+        .menor{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <%- include('cabecalho') %>
+    <link rel="stylesheet" type="text/css" href="/css/estilos.css"/>
+
+    <section class="sessao1">
+        <form action="/idade" method="post">
+            <div>
+                <label>
+                    <span>Nome</span>
+                    <input name="nome" />
+                </label>
+                <label>
+                    <span>Ano</span>
+                    <input name="ano" type="number" />
+                </label>
+                <label>
+                    <span>Doação</span>
+                    <input name="doacao" type="number" />
+                </label>
+                <button>Enviar</button>
+            </div>
+        </form>
+        
+    </section>
+    
+    
+    <section>
+        <form id="form1" onsubmit="event.preventDefault();inserir(nome,ano);">
             <label>
-                <span>Nome <%= i %></span>
-                <input name="nome<%= i %>" />
+                <span>Nome</span>
+                <input id='nome' name="nome" />
             </label>
             <label>
                 <span>Ano</span>
-                <input name="ano" type="number" />
+                <input id='ano' name="ano" type="number" />
             </label>
-            <label>
-                <span>Doação</span>
-                <input name="doacao" type="number" />
-            </label>
-        </div>
-    <%
-    }
-    _%> -->
-    <button>Enviar</button>
-</form>
+            <button>Gravar</button>
+        </form>
+    
+        <section id="pessoas">
+
+        </section>
+    </section>
+    <%- include('rodape') %>
+
+    <script>
+        editar=0
+        nomeAnterior=''
+        function mostrarLista(){
+            let mostrarpessoas = document.querySelector('#pessoas');
+            mostrarpessoas.innerHTML='';
+            pessoas.map((elemento)=>{
+                let nome = elemento[0];
+                let ano = parseInt(elemento[1]);
+                let idade = 2025 - ano;
+
+                let article = document.createElement("article");
+
+                let h1 = document.createElement("h1");
+                h1.innerText = nome;
+                article.appendChild(h1);
+
+                let spanAno = document.createElement("span");
+                spanAno.setAttribute('id','spanAno');
+                spanAno.innerText = 'Ano: ' + ano + " - ";
+                article.appendChild(spanAno);
+
+                let spanIdade = document.createElement("span");
+                spanIdade.innerText = 'Idade: ' + idade + " - ";
+                article.appendChild(spanIdade);
+
+                let botaoAlterar = document.createElement("button");
+                botaoAlterar.innerText = 'Alterar';
+                botaoAlterar.onclick = (event) => {alteraRegistro(botaoAlterar)};
+                article.appendChild(botaoAlterar);
+
+                let botaoExcluir = document.createElement("button");
+                botaoExcluir.innerText = 'Excluir';
+                botaoExcluir.onclick = (event) => {excluiRegistro(botaoExcluir)};
+                article.appendChild(botaoExcluir);
+
+                mostrarpessoas.appendChild(article);
+
+                if (idade >= 18){
+                    article.classList.add('maior');
+                }
+                else {
+                    article.classList.add('menor');
+                }
+            });
+        }
+
+        let pessoas = [];
+
+        function inserir() {
+            let nome = form1.nome.value;
+            let ano = parseInt(form1.ano.value);
+            if (editar==0){
+                pessoas.push([nome,ano]);
+            }else{
+                pessoas.map((e)=>{
+                    if(nomeAnterior==e[0]){
+                        e[0] = form1.nome.value  
+                        e[1] = form1.ano.value 
+                        editar=0
+                    }
+                })
+            }
+            form1.nome.value = ''
+            form1.ano.value = ''
+            mostrarLista();
+        }
+
+        async function listar() {
+            return pessoas;
+        }
+
+        function alteraRegistro(button){
+            let article = button.parentNode;
+            let nome = article.querySelector('h1').innerText;
+            pessoas.map((e)=>{
+                if(nome==e[0]){
+                    form1.nome.value = e[0]
+                    form1.ano.value = e[1]
+                    editar = 1
+                    nomeAnterior = e[0]
+                    console.log('Botao Alterar - Nome Anterior: ' + nomeAnterior)
+                }
+            })
+        }
+
+        function excluiRegistro(button){
+            console.log("Teste Exclui Registro")
+            let article = button.parentNode;
+            let nome = article.querySelector('h1').innerText;
+            pessoas.map((e, indice)=>{
+                console.log(e)
+                if (nome==e[0]){
+                    console.log(e[0])
+                    pessoas.splice(indice, 1);
+                }
+            })
+            mostrarLista();
+        }
+
+
+    </script>
+</body>
+</html>
 
 <!-- <form action="/idade" method="post"> -->
     <!-- <label>
