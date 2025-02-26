@@ -1,0 +1,4 @@
+comando abrir o vscode: code .
+comando ativar Servidor Web: npm run start
+ativar o wampServer
+comando ativar Node Red:  node-red

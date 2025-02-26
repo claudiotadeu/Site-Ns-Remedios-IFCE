@@ -1,5 +1,5 @@
 class UsuarioStore {
-    usuario = [];
+    usuarios = [];
 
     listar() {
         return this.usuarios;

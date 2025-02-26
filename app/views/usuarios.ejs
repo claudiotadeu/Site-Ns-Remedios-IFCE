@@ -1,0 +1,126 @@
+<body>
+    <%- include('cabecalho') %>
+
+    <main class="main_administracao">
+        <div class="div_tituloAdministracao">
+            <div class="div_menuCadastroAdministracao">
+                <a href="administracao.html"><img src="/imagens/icons/left.svg" alt="" title="Voltar Para Pagina Administração"></a>
+            </div>
+
+            <div class="div_filtro">
+                <div>
+                    <label for="input_filtroNome">Filtrar Por Nome:</label>
+                </div>
+                <input type="text" name="input_filtroNome" id="input_filtroNome">
+            </div>
+            <div class="div_logofConfiguracao">
+                <a href="#" target="_self"><img src="imagens/icons/search.svg" alt="" title="Pesquisar"></a>
+                <a href="#" target="_self"><img src="/imagens/icons/print.svg" alt="" title="Imprimir"></a>
+                <a href="login.html" target="_self"><img src="/imagens/icons/logout.svg" alt="" title="Efetuar Logof"></a>
+                <a href="pagina_em_desenvolvimento.html" target="_self"><img src="/imagens/icons/settings.svg" alt="" title="Configurações"></a>
+            </div>
+        </div>
+        <div class="div_framePrincipal">
+            <div class="div_frame">
+                <!-- <iframe src="" frameborder="0"></iframe> -->
+                 <div class="div_frameCadastroUsuarios">
+                    <section class="sessao_cadastroUsuarios">
+
+                        <div id="div_tituloFormularioUsuarios" class="div_tituloFormularioUsuarios">
+                            <h2>CADASTRO DE USUÁRIOS</h2>
+                        </div>
+                        <div class="div_formularioUsuarios">
+                            <form name="usuarios" action="/api/usuarios" method="post">
+                                <div class="div_campoForm"> 
+                                    <label for="nome">Nome</label>
+                                    <input type="text" name="nome" id="nome">
+                                </div>
+                                <div class="div_campoForm">
+                                    <label for="username">Usuário</label>
+                                    <input type="text" name="username" id="username">
+                                </div>
+                                <div class="div_campoForm">
+                                    <label for="senha">Senha</label>
+                                    <input type="password" name="senha" id="senha">
+                                </div>
+                                <div class="div_campoForm2">
+                                    <div class="div_campoForm">
+                                        <label for="select_permissao">Tipo Permissão</label>
+                                        <select name="permissao" id="permissao" size="1">
+                                            <option value="1">Master</option>
+                                            <option value="2">Admin</option>
+                                            <option value="3">Gerente</option>
+                                            <option value="4">Operador</option>
+                                            <option value="5">Consulta</option>
+                                        </select>
+                                    </div>
+                                    <!-- <div class="div_campoForm">
+                                        <label for="situacao">Situação</label>
+                                        <select name="situacao" id="situacao" size="1">
+                                            <option value="A">Ativo</option>
+                                            <option value="I">Inativo</option>
+                                        </select>
+                                    </div> -->
+                                </div>
+                                <!-- <div class="div_campoForm2">
+                                    <div class="div_foto">
+                                        <img src="#" alt="" title="Foto Usuário">
+                                    </div>
+                                    <div class="div_campoForm">
+                                        <label for="foto">Foto</label>
+                                        <input type="file" name="foto" id="foto">
+                                    </div>
+                                </div> -->
+                                <div class="div_rodapeFormularioUsuarios">
+                                    <button id="botao_gravar" class="botao_padrao">Gravar</button>
+                                    <button id="botao_limpar" class="botao_padrao">Limpar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+    
+                    <section class="sessao_grid">
+                        <div class="div_tituloGrid">
+                            <h2>Lista de Usuários Cadastrados</h2>
+                        </div>
+                        <div class="div_cabecalhoGrid">
+                            <div class="div_Cabecalhocoluna1">Nome</div>
+                            <div class="div_Cabecalhocoluna2">Usuário</div>
+                            <div class="div_Cabecalhocoluna3">Tipo Acesso</div>
+                            <div class="div_Cabecalhocoluna4">Situação</div>
+                            <div class="div_Cabecalhocoluna5">Ação</div>
+                        </div>
+                        <% for (let usuario of usuarios) { %>
+                        <div class="div_corpoGrid">
+                            <div><%= usuario.nome %></div>
+                            <div><%= usuario.username %></div>
+                            <div><%= usuario.permissao %></div>
+                            <div class="div_tipoAcesso">
+                                <div>A</div>
+                                <div><img src="/imagens/icons/ativar.svg" alt=""></div>
+                            </div>
+                            <div class="div_acao">
+                                <div><img src="/imagens/icons/passwordoff.svg" alt="" title="Limpar Senha"></div>
+                                <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
+                                <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
+                            </div>
+                        </div>
+                        <% } %>
+                        <div class="div_rodapeGrid">
+                            <h3>Total de Registros: 04</h3>
+                            <h3>Qtde de Registros Ativos: 03</h3>
+                            <h3>Qtde de Registros Inativos: 01</h3>
+                        </div>
+                    </section>
+                 </div>
+            </div>
+        </div>
+    </main>
+    <!-- <script src="/app/controllers/UsuarioController.js" type="module"></script> -->
+
+    <!--Rodapé-->
+    <footer>
+        <p>Todos Os Direitos Reservados: Claudio Tadeu Severino - Trabalho de Desenvolvimento HTML - CSS - IFCE - Curso de Informática Para Web - Disciplina: Desenvolvimento WEB I - Unidade 5</p>
+    </footer>
+</body>
+</html>

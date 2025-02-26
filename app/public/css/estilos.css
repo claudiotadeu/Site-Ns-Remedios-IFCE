@@ -438,7 +438,7 @@ footer{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 71vh;
+    height: 59vh;
 }
 
 .div_tituloFormularioLogin{
@@ -464,6 +464,7 @@ footer{
     flex-direction: column;
     width: 400px;
     border: 1px solid var(--titulorodapeFormGrid);
+    border-radius: 0px 0px 25px 25px ;
 }
 .div_formularioLogin form{
     display: flex;
@@ -511,7 +512,7 @@ footer{
     background-color: var(--titulorodapeFormGrid);
     width: 400px;
     padding: 10px;
-    margin-bottom: 80px;
+    /* margin-bottom: 80px; */
 }
 .div_rodapeFormularioLogin button a{
     text-decoration: none;
@@ -843,3 +844,165 @@ footer{
 .testeDiv{
     background-color: blue;
 }
+
+
+/* div_formularioLogin */
+
+/* Pagina de Cadastro de Usuários */
+
+.div_menuCadastroAdministracao  img:hover ~ .div_menuLateral{
+    position: relative;
+    transform: translatey(0) scaley(1);
+}
+
+.div_frameCadastroUsuarios{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 100%;
+}
+
+.div_tituloFormularioUsuarios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px 25px 0px 0px;
+    background-color: var(--titulorodapeFormGrid);
+}
+.div_tituloFormularioUsuarios h1,h2{
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    padding: 5px;
+}
+
+.div_formularioUsuarios{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    border: 1px solid var(--titulorodapeFormGrid);
+}
+.div_formularioUsuarios form{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.div_foto{
+    width: 130px;
+    height: 120px;
+    border: 1px solid #000;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+.div_campoFormInput{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div_rodapeFormularioUsuarios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 25px 25px;
+    background-color: var(--titulorodapeFormGrid);
+    width: 400px;
+    padding: 8px;
+}
+.div_rodapeFormularioUsuarios button a{
+    text-decoration: none;
+    color: #000;
+}
+.div_rodapeFormularioUsuarios button a:hover{
+	background-color:#c22;
+	color:#fff;
+}
+
+.sessao_grid{
+    width: 100%;
+    height: 55%;
+}
+
+.div_tituloGrid{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--titulorodapeFormGrid);
+    border-radius: 25px 25px 0px 0px;
+}
+
+.div_cabecalhoGrid{
+    display: grid;
+    grid-template-columns: 25% 30% 20% 15% 10%;
+    padding: 10px;
+    background-color: var(--titulorodapeFormGrid);
+    color: #fff;    
+    font-size: 20px;
+}
+
+.div_corpoGrid{
+    display: grid;
+    grid-template-columns: 25% 30% 20% 15% 10%;
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--titulorodapeFormGrid);
+    width: 100%;
+    height: 47vh;
+    overflow-y: scroll;
+}
+.div_linhaDadosGrid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 30% 20% 15% 10%;
+    padding: 10px 10px 0px 15px;
+}
+.div_linhaDadosGrid:nth-child(odd){
+    background-color: #eee;
+}
+.div_linhaDadosGrid:nth-child(even){
+    background-color: #ccc;
+}
+.div_linhaDadosGrid:hover{
+    background-color: #088 !important;
+    color: #fff !important;
+} 
+
+.div_tipoAcesso{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 34%;
+}
+.div_tipoAcesso img{
+    cursor: pointer;
+}
+
+.div_acao{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 34%;
+}
+.div_acao img{
+    cursor: pointer;
+    width: 20px;
+}
+
+.div_rodapeGrid{
+    background-color: var(--titulorodapeFormGrid);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--titulorodapeFormGrid);
+    border-radius:0px 0px 25px 25px;
+    padding: 17px;
+}
+
+

@@ -1,13 +1,33 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 <body>
     <%- include('cabecalho') %>
-    <main class="main_login">
+    
+    <h1>Teste de Implementação de Formulário</h1>
+
+    <!-- Confirmar o usuário e senha
+    trazer id, nome e o nivel do Usuário -->
+    <div class="testeDiv">
+        <h1>Teste de Implementação de Formulário 2</h1>
+        <p>Nome do Usuário, <%= usuario.nome %></p>
+        <p>Id do Usuário <%= usuario.username %>. </p>
+        <!-- <p>Nível de Acesso Usuário <%= ?????? %> anos!</p> -->
+    </div>
+
+
+
+
+    <!-- original -->
+    <!--  
+        <div class="testeDiv">
+        <p>Olá, <%= pessoa.nome %>!</p>
+        <p>Você nasceu em <%= pessoa.ano %>. </p>
+        <p>Tem <%= idade %> anos!</p>
+        <p>Sua doação foi de: <%= pessoa.doacao %>.</p> 
+        <p>Saldo final de doações: <%= saldo %></p>
+    </div> -->
+
+
+
+    <!-- <main class="main_login">
         <div class="div_tituloFormularioLogin">
             <h1>FAÇA SEU LOGIN</h1>
         </div>
@@ -27,7 +47,7 @@
             <button id="botao_login" class="botao_padrao"><a href="administracao.html">Login</a></button>
             <button id="botao_limpar" class="botao_padrao">Limpar</button>
         </div>
-    </main>
+    </main> -->
          
 </body>
 </html>

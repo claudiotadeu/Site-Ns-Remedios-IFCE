@@ -7,6 +7,9 @@ const PessoaController = require('./controllers/PessoaController');
 const PessoasStore = require('./lib/PessoasStore');
 const UsuarioController = require('./controllers/UsuarioController');
 const UsuarioStore = require('./lib/UsuarioStore');
+const UsuariosStoreDb = require('./lib/UsuariosStoreDb');
+const LoginController = require('./controllers/LoginController');
+const LoginStore = require('./lib/LoginStore');
 
 const app = express();
 app.use(express.static('public'));
@@ -27,18 +30,57 @@ const pool = mysql.createPool({
     keepAliveInitialDelay: 0,
 });
 
-
 const pessoasStore = new PessoasStore();
 const usuarioStore = new UsuarioStore();
+const usuariosStoreDb = new UsuariosStoreDb();
+const loginStore = new LoginStore();
 
 const indexController = new IndexController();
 const pessoaController = new PessoaController(pessoasStore);
 const usuarioController = new UsuarioController(usuarioStore);
+const loginController = new LoginController(loginStore);
 
 
 app.get('/', (req, res) => {
     indexController.index(req, res);
 });
+
+
+// Login de Usuários
+
+// app.get('/login', (req, res) => {
+//     res.send(req.query);
+// })
+app.get('/login', (req, res) => {
+    loginController.consulta(req, res);
+});
+
+
+// Cadastro de Usuários
+
+app.get('/usuarios', (req, res) => {
+    let usuarios = usuarioStore.listar();
+    res.render('usuarios',{usuarios});
+});
+
+// app.get('/api/usuarios', (req, res) => {
+//     usuarioController.listar(req, res);
+// })
+app.get('/api/usuarios/:id', (req, res) => {
+    usuarioController.ver(req, res);
+})
+app.post('/api/usuarios', (req, res) => {
+    usuarioController.inserir(req, res);
+})
+app.put('/api/usuarios/:id', (req, res) => {
+    usuarioController.alterar(req, res);
+})
+app.delete('/api/usuarios/:id', (req, res) => {
+    usuarioController.apagar(req, res);
+})
+
+
+// EXEMPLO 
 
 app.get('/idade', (req, res) => {
     res.send(req.query);
@@ -46,6 +88,31 @@ app.get('/idade', (req, res) => {
 app.post('/idade', (req, res) => {
     pessoaController.idade(req, res);
 });
+
+
+app.get('/pessoas', (req, res) => {
+    pessoaController.listar(req, res);
+})
+app.get('/pessoas/:id', (req, res) => {
+    pessoaController.ver(req, res);
+})
+app.post('/pessoas', (req, res) => {
+    pessoaController.inserir(req, res);
+})
+app.put('/pessoas/:id', (req, res) => {
+    pessoaController.alterar(req, res);
+})
+app.delete('/pessoas/:id', (req, res) => {
+    pessoaController.apagar(req, res);
+})
+
+
+
+// app.post('/login', (req, res) => {
+//     loginController.inserir(req, res);
+// });
+
+
 
 
 // app.get('/', (req, res) => {
@@ -111,8 +178,8 @@ app.get('/desenvolvimento', (req, res) => {
     res.render('desenvolvimento');
 })
 
-app.get('/admin', (req, res) => {
-    res.render('admin');
+app.get('/administracao', (req, res) => {
+    res.render('administracao');
 });
 
 app.get('/publicacoes', (req, res) => {
@@ -121,28 +188,32 @@ app.get('/publicacoes', (req, res) => {
 
 
 // Auxiliar login
-app.get('/login', (req, res) => {
-    res.send(req.query);
-})
-app.post('/login', (req, res) => {
-    usuarioController.login(req, res);
-});
+// app.get('/login', (req, res) => {
+//     res.send(req.query);
+// })
+// app.get('/login', (req, res) => {
+//     loginController.consulta(req, res);
+// });
 
-app.get('/pessoas', (req, res) => {
-    pessoaController.listar(req, res);
-})
-app.get('/pessoas/:id', (req, res) => {
-    pessoaController.ver(req, res);
-})
-app.post('/pessoas', (req, res) => {
-    pessoaController.inserir(req, res);
-})
-app.put('/pessoas/:id', (req, res) => {
-    pessoaController.alterar(req, res);
-})
-app.delete('/pessoas/:id', (req, res) => {
-    pessoaController.apagar(req, res);
-})
+// app.post('/login', (req, res) => {
+//     loginController.inserir(req, res);
+// });
+
+// app.get('/pessoas', (req, res) => {
+//     pessoaController.listar(req, res);
+// })
+// app.get('/pessoas/:id', (req, res) => {
+//     pessoaController.ver(req, res);
+// })
+// app.post('/pessoas', (req, res) => {
+//     pessoaController.inserir(req, res);
+// })
+// app.put('/pessoas/:id', (req, res) => {
+//     pessoaController.alterar(req, res);
+// })
+// app.delete('/pessoas/:id', (req, res) => {
+//     pessoaController.apagar(req, res);
+// })
 
 app.get('*', function naoEncontrado(request, response) {
     response.writeHead(404, {'Content-Type': 'text/plain'});

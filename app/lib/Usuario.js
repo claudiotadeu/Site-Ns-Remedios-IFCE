@@ -1,12 +1,14 @@
 class Usuario {
-    login;
-    senha;
-    // doacao;    
+    nome;
+    username;
+    senha; 
+    permissao;
     
-    constructor(login, senha) {
-        this.login = login;
-        this.senha = senha;
-        // this.doacao = doacao;
+    constructor(nome,username,senha,permissao) {
+        this.nome=nome;
+        this.username=username;
+        this.senha=senha; 
+        this.permissao=permissao;
     }
 
     // getIdade() {
