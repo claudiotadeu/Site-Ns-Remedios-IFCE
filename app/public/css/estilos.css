@@ -846,9 +846,7 @@ footer{
 }
 
 
-/* div_formularioLogin */
-
-/* Pagina de Cadastro de Usuários */
+/* PAGINA DE CADASTRO DE USUÁRIOS */
 
 .div_menuCadastroAdministracao  img:hover ~ .div_menuLateral{
     position: relative;
@@ -883,6 +881,7 @@ footer{
     flex-direction: column;
     width: 400px;
     border: 1px solid var(--titulorodapeFormGrid);
+    border-radius: 0px 0px 25px 25px;
 }
 .div_formularioUsuarios form{
     display: flex;
@@ -940,7 +939,7 @@ footer{
 
 .div_cabecalhoGrid{
     display: grid;
-    grid-template-columns: 25% 30% 20% 15% 10%;
+    grid-template-columns: 5% 25% 30% 20% 10% 10%;
     padding: 10px;
     background-color: var(--titulorodapeFormGrid);
     color: #fff;    
@@ -948,21 +947,23 @@ footer{
 }
 
 .div_corpoGrid{
-    display: grid;
-    grid-template-columns: 25% 30% 20% 15% 10%;
     justify-content:flex-start;
-    align-items: center;
-    flex-direction: column;
+    align-items: flex-start;
+    flex-direction: row;
     border: 1px solid var(--titulorodapeFormGrid);
     width: 100%;
-    height: 47vh;
+    height: 41vh;
     overflow-y: scroll;
 }
 .div_linhaDadosGrid{
     width: 100%;
     display: grid;
-    grid-template-columns: 25% 30% 20% 15% 10%;
-    padding: 10px 10px 0px 15px;
+    grid-template-columns: 5% 25% 30% 20% 10% 10%;
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    border: 1px solid #800;
 }
 .div_linhaDadosGrid:nth-child(odd){
     background-color: #eee;
@@ -974,6 +975,18 @@ footer{
     background-color: #088 !important;
     color: #fff !important;
 } 
+
+.div_situacao{
+    width: 100%;
+    display: grid;
+    /* grid-template-columns: 50% 50%; */
+    /* grid-template-columns: 33% 33% 34%; */
+    grid-template-columns: 25% 25% 25% 25%;
+
+}
+.div_situacao img{
+    cursor: pointer;
+}
 
 .div_tipoAcesso{
     width: 100%;
@@ -1004,5 +1017,452 @@ footer{
     border-radius:0px 0px 25px 25px;
     padding: 17px;
 }
+
+
+/* INICIO PAGINA DE CADASTRO DE PUBLICAÇÕES */
+.div_menuCadastroAdministracao  img:hover ~ .div_menuLateral{
+    position: relative;
+    transform: translatey(0) scaley(1);
+    cursor: pointer;
+}
+
+.div_frameCadastroPublicacoes{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.sessao_cadastroPublicacoes{
+    width: 100%;
+}
+
+.div_tituloFormularioPublicacoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 25px 25px 0px 0px;
+    background-color: var(--titulorodapeFormGrid);
+}
+.div_tituloFormularioPublicacoes h1,h2{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+}
+
+.div_formularioPublicacoes{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid var(--titulorodapeFormGrid);
+}
+.div_formularioPublicacoes form{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.div_banner, .div_imagem{
+    width: 130px;
+    height: 120px;
+    border: 1px solid #000;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding: 5px;
+}
+.div_campoFormInput{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div_rodapeFormularioPublicacoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 25px 25px;
+    background-color: var(--titulorodapeFormGrid);
+    width: 100%;
+    padding: 12px;
+}
+.div_rodapeFormularioPublicacoes button a{
+    text-decoration: none;
+    color: #000;
+}
+.div_rodapeFormularioPublicacoes button a:hover{
+	background-color:#c22;
+	color:#fff;
+}
+
+/* INICIO GRID */
+.div_divisaoSessao{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.div_consultar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 13%;
+    font-size: 25px;
+}
+.div_consultar img{
+    width: 25%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.sessao_listaPublicacoes{
+    width: 100%;
+}
+
+.table_grid{
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+.table_grid th{
+    color: #fff;    
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: var(--titulorodapeFormGrid);
+}
+.tr_dadosGrid{
+    /* display: flex;
+    justify-content: flex-start;
+    flex-direction: column; */
+    border: 1px solid #800;
+}
+
+.table_grid td{
+    font-size: 20px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.table_grid td div{
+    display: flex;
+    justify-content: space-around;
+}
+/* div_acoes */
+.table_grid td div img{
+    width: 60%;
+    cursor: pointer;
+}
+.div_imagemAtivo{
+    width: 50px;
+}
+.div_Cabecalhocoluna1{
+    width: 5%;
+}
+.div_Cabecalhocoluna2{
+    width: 25%;
+}
+.div_Cabecalhocoluna3{
+    width: 30%;
+}
+.div_Cabecalhocoluna4{
+    width: 20%;
+}
+.div_Cabecalhocoluna5{
+    width: 10%;
+}
+.div_Cabecalhocoluna6{
+    width: 10%;
+}
+
+/* .div_corpoGrid{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--titulorodapeFormGrid);
+    width: 100%;
+    height: 40.5vh;
+    overflow-y: scroll;
+
+}
+.div_dadosGrid{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    padding: 5px;
+    font-size: 25px;
+} */
+.linhaGrid:nth-child(odd){
+    background-color: #eee;
+
+}
+.linhaGrid:nth-child(even){
+    background-color: #ccc;
+}
+.linhaGrid:hover{
+    background-color: #088 !important;
+    color: #fff !important;
+}
+
+/* 
+.div_Cabecalhocoluna1{    width: 5%;}
+.div_Cabecalhocoluna2{    width: 25%;}
+.div_Cabecalhocoluna3{    width: 30%;}
+.div_Cabecalhocoluna4{    width: 20%;}
+.div_Cabecalhocoluna5{    width: 10%;}
+.div_Cabecalhocoluna6{    width: 10%;} */
+
+
+
+.td_dadoid{
+    width: 05%;
+}
+.td_dadoChamada{
+    width: 25%;
+}
+.td_dadoDataInicio{
+    width: 30%;
+}
+.td_dadoDataFim{
+    width: 20%;
+}
+.td_dadoSituacao{
+    /* display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: row; */
+    width: 10%;
+    /* padding-left: 10px; */
+}
+.div_td_situacao{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div_valorSituacao{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #080; */
+}
+
+.div_imgSituacao{
+    display: flex;
+    justify-content: center;
+    padding-left: 10%;
+    width: 70%;
+    cursor: pointer;
+    /* border: 1px solid #080; */
+}
+.div_imgSituacao img{
+    /* display: flex;
+    justify-content: center; */
+    padding-left: 10%;
+    width: 50px;
+    cursor: pointer;
+    /* border: 1px solid #080; */
+    /* width: 20%; */
+}
+
+
+.td_dadoAcoes{
+    border: 1px solid #080;
+    /* display: flex; */
+    /* 
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: row; */
+    /* width: 10%; */
+}
+.td_dadoAcoes img{
+    width: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    /* width: 10%; */
+}
+
+.div_rodapeGrid{
+    background-color: var(--titulorodapeFormGrid);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--titulorodapeFormGrid);
+    border-radius:0px 0px 25px 25px;
+    padding: 15px;
+    color: #fff;
+    font-size: 20px;
+
+}
+/* 
+.sessao_gridPublicacoes{
+    width: 100%;
+}
+
+.div_Cabecalhocoluna1Publicacoes{
+    width: 60%;
+}
+.div_Cabecalhocoluna2Publicacoes{
+    width: 15%;
+}
+.div_Cabecalhocoluna3Publicacoes{
+    width: 15%;
+}
+.div_Cabecalhocoluna4Publicacoes{
+    width: 15%;
+}
+.div_Cabecalhocoluna5Publicacoes{
+    width: 10%;
+}
+
+.div_dadocoluna1Publicacoes{
+    width: 60%;
+}
+.div_dadocoluna2Publicacoes{
+    width: 15%;
+}
+.div_dadocoluna3Publicacoes{
+    width: 15%;
+}
+.div_dadocoluna4Publicacoes{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 15%;
+    padding-left: 10px;
+}
+.div_dadocoluna4Publicacoes img{
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.div_dadocoluna5Publicacoes{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 10%;
+}
+.div_dadocoluna5Publicacoes img{
+    width: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+} */
+/* FIM  PAGINA DE CADASTRO DE PUBLICAÇÕES */
+
+/* INICIO PAGINA DE PUBLICAÇÕES */
+/* .article_publicacao{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+.div_imagemBanner{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+.div_imagemBanner img{
+    width: 400px;
+    border-radius: 10px;
+    float: left;
+    width: 100%;
+}
+.div_imagemBanner label{
+font-size: 2em;
+}
+.div_textoPrincipal{
+    padding: 10px;
+    font-size: 2em;
+}
+.div_textoPrincipal img{
+    border-radius: 10px;
+    float: left;
+    width: 100%;
+    width: 400px;
+    margin-right: 1em;
+} */
+/* FIM PAGINA DE PUBLICAÇÕES */
+
+/* INICIO POPUP */
+
+.fundoPopup{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    width: 100%;
+    height: 95vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    /* margin-top: 5px; */
+
+}
+
+.telaPopup{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    background-color: #aaa;
+    border-radius: 10px;
+    width: 600px;
+    /* height: 600px; */
+}
+
+.topoPopup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #248;
+    color: #fff;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.corpoPopup{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    padding: 5px;
+    /* border: 1px solid #f00; */
+}
+
+.rodapePopup{
+    display: flex;
+    justify-content: space-around;
+    background-color: #ddd;
+    width: 100%;
+    padding: 5px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.ocultarPopup{
+    display: none !important;
+}
+/* FIM POPUP */
 
 

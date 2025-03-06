@@ -1,4 +1,4 @@
-version: '3'
+# version: '3'
 
 services:
   node:
@@ -8,3 +8,16 @@ services:
     volumes:
       - ./app:/home/node/app
       - /home/node/app/node_modules
+      
+  db:
+    image: mariadb
+    restart: always
+    env_file: .env
+    volumes:
+      - ./mariadb/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+volumes:
+  mysql_data:

@@ -3,7 +3,8 @@ CREATE TABLE `Usuarios` (
   `nome` varchar(80),
   `username` varchar(50),
   `senha` varchar(30),
-  `id_tipoUsuario` integer
+  `id_tipoUsuario` integer,
+  `situacao` char(1)
 );
 
 CREATE TABLE `TiposUsuarios` (

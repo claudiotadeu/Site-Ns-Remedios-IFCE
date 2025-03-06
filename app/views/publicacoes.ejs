@@ -2,250 +2,409 @@
     <%- include('cabecalho') %>
 
     <main class="main_administracao">
+
+        <!-- INICIO POPUP VER -->
+        <div id="fundoPopup" class="fundoPopup ocultarPopup">
+            <div id="telaPopup" class="telaPopup">
+                <div id="topoPopup" class="topoPopup"><h2>TEXTO DA NOTÍCIA</h2></div>
+                <div id="corpoPopup" class="corpoPopup">
+                    <!-- <textarea name="textonoticiaPopup" id="textonoticiaPopup" cols="50" rows="06"></textarea> -->
+                </div>
+                <div id="rodapePopup" class="rodapePopup">
+                    <button id="btn_sair_Popup" class="botao_padrao">Sair</button>
+                </div>
+            </div>    
+        </div>
+        <!-- FIM POPUP VER -->
+
         <div class="div_tituloAdministracao">
             <div class="div_menuCadastroAdministracao">
-                <a href="administracao.html"><img src="/imagens/icons/left.svg" alt="" title="Voltar Para Pagina Administração"></a>
+                <a href="administracao"><img src="/imagens/icons/left.svg" alt="" title="Voltar Para Pagina Administração"></a>
             </div>
             <div>
                 <a href="#" target="_self"><img src="imagens/icons/search.svg" alt="" title="Pesquisar"></a>
                 <a href="#" target="_self"><img src="/imagens/icons/print.svg" alt="" title="Imprimir"></a>
-                <a href="login.html" target="_self"><img src="/imagens/icons/logout.svg" alt="" title="Efetuar Logof"></a>
-                <a href="pagina_em_desenvolvimento.html" target="_self"><img src="/imagens/icons/settings.svg" alt="" title="Configurações"></a>
+                <a href="areaRestrita" target="_self"><img src="/imagens/icons/logout.svg" alt="" title="Efetuar Logof"></a>
+                <a href="pagina_em_desenvolvimento" target="_self"><img src="/imagens/icons/settings.svg" alt="" title="Configurações"></a>
             </div>
         </div>
-        <div class="div_framePrincipal">
-            <div class="div_frame">
-                <!-- <iframe src="" frameborder="0"></iframe> -->
-                <div class="div_frameCadastroPublicacoes">
-                    <section class="sessao_cadastroPublicacoes">
-                        <div id="div_tituloFormularioPublicacoes" class="div_tituloFormularioPublicacoes">
-                            <h2>CADASTRO DE PUBICAÇÕES</h2>
+        <div class="div_frameCadastroPublicacoes">
+            <section class="sessao_cadastroPublicacoes">
+                <div id="div_tituloFormularioPublicacoes" class="div_tituloFormularioPublicacoes">
+                    <h2>CADASTRO DE PUBICAÇÕES</h2>
+                </div>
+                <div class="div_formularioPublicacoes">
+                    <!-- <form name="cadastro_Publicacoes" action="cadastro_pubicacoes.html" method="post"> -->
+                    <form onsubmit="event.preventDefault(); processaForm(this);">
+
+                        <div class="div_campoForm2">
+                            <div class="div_campoForm">
+                                <label for="chamada_noticia">Chamada da Notícia</label>
+                                <input type="text" name="chamada_noticia" id="chamada_noticia">
+                            </div>
+                            <div class="div_campoForm">
+                                <label for="data_inicio_publicacao">Data Inicio da Publicação</label>
+                                <input type="date" name="data_inicio_publicacao" id="data_inicio_publicacao" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+                            </div>
+                            <div class="div_campoForm">
+                                <label for="data_fim_publicacao">Data Inicio da Publicação</label>
+                                <input type="date" name="data_fim_publicacao" id="data_fim_publicacao" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+                            </div>
+                            <div class="div_campoForm">
+                                <label for="select_situacao">Situação</label>
+                                <select name="situacao" id="select_situacao" size="1">
+                                    <option value="A">Ativo</option>
+                                    <option value="I">Inativo</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="div_formularioPublicacoes">
-                            <form name="f_cadastro_Publicacoes" action="cadastro_pubicacoes.html" method="post">
-                                <div class="div_campoForm2">
-                                    <div class="div_campoForm">
-                                        <label for="f_chamada_noticia">Chamada da Notícia</label>
-                                        <input type="text" name="f_chamada_noticia" id="f_chamada_noticia">
-                                    </div>
-                                    <div class="div_campoForm">
-                                        <label for="f_data_inicio_publicacao">Data Inicio da Publicação</label>
-                                        <input type="date" name="f_data_inicio_publicacao" id="f_data_inicio_publicacao">
-                                    </div>
-                                    <div class="div_campoForm">
-                                        <label for="f_data_fim_publicacao">Data Inicio da Publicação</label>
-                                        <input type="date" name="f_data_fim_publicacao" id="f_data_fim_publicacao">
-                                    </div>
-                                    <div class="div_campoForm">
-                                        <label for="select_situacao">Situação</label>
-                                        <select name="situacao" id="select_situacao" size="1">
-                                            <option value="A">Ativo</option>
-                                            <option value="I">Inativo</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="div_campoForm">
-                                    <label for="f_textonoticia">Texto da Noticia</label>
-                                    <textarea name="f_textonoticia" id="f_textonoticia" cols="60" rows="05"></textarea>
-                                </div>
-                                <div class="div_campoForm2">
-                                    <div class="div_campoForm2">
-                                        <div class="div_banner">
-                                            <img src="#" alt="" title="Imagem Banner">
-                                        </div>
-                                        <div class="div_campoForm">
-                                            <label for="f_banner">Imagem Banner</label>
-                                            <input type="file" name="f_banner" id="f_banner">
-                                        </div>
-                                    </div>
-                                    <div class="div_campoForm2">
-                                        <div class="div_imagem">
-                                            <img src="#" alt="" title="Imagem Imagem 1">
-                                        </div>
-                                        <div class="div_campoForm">
-                                            <label for="f_imagem1">Imagem 1</label>
-                                            <input type="file" name="f_imagem1" id="f_imagem1">
-                                        </div>
-                                    </div>
-                                    <div class="div_campoForm2">
-                                        <div class="div_imagem">
-                                            <img src="#" alt="" title="Imagem 2">
-                                        </div>
-                                        <div class="div_campoForm">
-                                            <label for="f_imagem2">Imagem 2</label>
-                                            <input type="file" name="f_imagem2" id="f_imagem2">
-                                        </div>
-                                    </div>
-                                    <div class="div_campoForm2">
-                                        <div class="div_imagem">
-                                            <img src="#" alt="" title="Imagem Banner">
-                                        </div>
-                                        <div class="div_campoForm">
-                                            <label for="f_imagem3">Imagem 3</label>
-                                            <input type="file" name="f_imagem3" id="f_imagem3">
-                                        </div>
-                                    </div>
-                                    <div class="div_campoForm2">
-                                        <div class="div_imagem">
-                                            <img src="#" alt="" title="Imagem 4">
-                                        </div>
-                                        <div class="div_campoForm">
-                                            <label for="f_imagem4">Imagem Imagem 4</label>
-                                            <input type="file" name="f_imagem4" id="f_imagem4">
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
+                        <div class="div_campoForm">
+                            <label for="textonoticia">Texto da Noticia</label>
+                            <textarea name="textonoticia" id="textonoticia" cols="60" rows="05"></textarea>
                         </div>
                         <div class="div_rodapeFormularioPublicacoes">
-                            <button id="botao_limpar" class="botao_padrao">Gravar</button>
-                            <button id="botao_limpar" class="botao_padrao">Limpar</button>
+                            <button id="botao_gravar" class="botao_padrao">Gravar</button>
+                            <!-- <button id="botao_limpar" class="botao_padrao">Limpar</button> -->
                         </div>
-                    </section>
+                    </form>
+                </div>
+            </section>
 
-                    <div class="div_divisaoSessao">
-                        <h1>Lista de Publicações Cadastradas</h1>
-                        <div class="div_filtro">
-                            <div>
-                                <label for="input_filtroChamada">Filtrar Por Chamada:</label>
-                            </div>
-                            <input type="text" name="input_filtroChamada" id="input_filtroChamada">
-                        </div>
-                        <div class="div_consultar">
-                            <h4>Consultar:</h4>
-                            <img src="imagens/icons/search.svg" alt="" title="filtrar Por Chamada">
-                        </div>
-            
+            <div class="div_divisaoSessao">
+                <h1>Lista de Publicações Cadastradas</h1>
+                <div class="div_filtro">
+                    <div>
+                        <label for="input_filtroChamada">Filtrar Por Chamada:</label>
                     </div>
-                    <section class="sessao_listaPublicacoes">
-                        <table class="table_grid">
-                            <tr>
-                                <th>Chamada</th>
-                                <th>Data Inicio</th>
-                                <th>Data Fim</th>
-                                <th>Situação</th>
-                                <th>Ação</th>
-                            </tr>
-                            <tr>
-                                <td>Festa da Miséricórdia</td>
-                                <td>02/04/2024</td>
-                                <td>08/04/2024</td>
-                                <td>
-                                    <div>
-                                        <div>A</div>
-                                        <div class="div_imagemAtivo"><img src="/imagens/icons/ativar.svg" alt=""></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>
-                                        <div><img src="/imagens/icons/visualizar.svg" alt="" title="Limpar Senha"></div>
-                                        <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
-                                        <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Domingo de Páscoa - Festa da Ressurreição</td>
-                                <td>29/03/2024</td>
-                                <td>01/04/2024</td>
-                                <td>
-                                    <div>
-                                        <div>A</div>
-                                        <div class="div_imagemAtivo"><img src="/imagens/icons/ativar.svg" alt=""></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>
-                                        <div><img src="/imagens/icons/visualizar.svg" alt="" title="Limpar Senha"></div>
-                                        <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
-                                        <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Apresentação da Paixão e Morte de Jesus Cristo</td>
-                                <td>27/03/2024</td>
-                                <td>01/04/2024</td>
-                                <td>
-                                    <div>
-                                        <div>A</div>
-                                        <div class="div_imagemAtivo"><img src="/imagens/icons/ativar.svg" alt=""></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>
-                                        <div><img src="/imagens/icons/visualizar.svg" alt="" title="Limpar Senha"></div>
-                                        <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
-                                        <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Missa da Luz - Sábado de Aleluia - Momento de Forte Espiritualidade</td>
-                                <td>25/03/2024</td>
-                                <td>29/03/2024</td>
-                                <td>
-                                    <div>
-                                        <div>A</div>
-                                        <div class="div_imagemAtivo"><img src="/imagens/icons/ativar.svg" alt=""></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>
-                                        <div><img src="/imagens/icons/visualizar.svg" alt="" title="Limpar Senha"></div>
-                                        <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
-                                        <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Missa de Lava Pés - Instituição da Eucaristia - Fundação do Sacerdócio</td>
-                                <td>25/03/2024</td>
-                                <td>29/03/2024</td>
-                                <td>
-                                    <div>
-                                        <div>A</div>
-                                        <div class="div_imagemAtivo"><img src="/imagens/icons/ativar.svg" alt=""></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>
-                                        <div><img src="/imagens/icons/visualizar.svg" alt="" title="Limpar Senha"></div>
-                                        <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
-                                        <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Domingo de Ramos - A Entrada De Jesus Cristo em Jerusalém</td>
-                                <td>20/03/2024</td>
-                                <td>25/03/2024</td>
-                                <td>
-                                    <div>
-                                        <div>A</div>
-                                        <div class="div_imagemAtivo"><img src="/imagens/icons/ativar.svg" alt=""></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>
-                                        <div><img src="/imagens/icons/visualizar.svg" alt="" title="Limpar Senha"></div>
-                                        <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
-                                        <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-
-                        <div class="div_rodapeGrid">
-                            <h3>Total de Registros: 06</h3>
-                            <h3>Qtde de Registros Ativos: 05</h3>
-                            <h3>Qtde de Registros Inativos: 01</h3>
-                        </div>
-                    </section>
-                 </div>
+                    <input type="text" name="input_filtroChamada" id="input_filtroChamada">
+                </div>
+                <div class="div_consultar">
+                    <h4>Consultar:</h4>
+                    <img src="imagens/icons/search.svg" alt="" title="filtrar Por Chamada">
+                </div>
+    
             </div>
+
+            <section class="sessao_listaPublicacoes">
+                <table id="table_CabecalhoGrid" class="table_grid">
+                    <tr>
+                        <th class="div_Cabecalhocoluna1">Id</th>
+                        <th class="div_Cabecalhocoluna2">Chamada</th>
+                        <th class="div_Cabecalhocoluna3">Data Inicio</th>
+                        <th class="div_Cabecalhocoluna4">Data Fim</th>
+                        <th class="div_Cabecalhocoluna5">Situação</th>
+                        <th class="div_Cabecalhocoluna6">Ação</th>
+                    </tr>
+                </table>
+                <table id="table_grid" class="table_grid">
+
+                    <!-- <tr id="tr_dadosGrid" class="tr_dadosGrid"> -->
+                        <!-- <div id="div_linha" class="div_linha"> -->
+                            <!-- Linha -->
+                        <!-- </div> -->
+                        <!-- <td>Festa da Miséricórdia</td>
+                        <td>02/04/2024</td>
+                        <td>08/04/2024</td>
+                        <td>
+                            <div>
+                                <div>A</div>
+                                <div class="div_imagemAtivo"><img src="/imagens/icons/ativar.svg" alt=""></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <div><img src="/imagens/icons/visualizar.svg" alt="" title="Limpar Senha"></div>
+                                <div><img src="/imagens/icons/editar.svg" alt="" title="Editar"></div>
+                                <div><img src="/imagens/icons/deletar.svg" alt="" title="Excluir"></div>
+                            </div>
+                        </td> -->
+                    <!-- </tr> -->
+                </table>
+
+                <div class="div_rodapeGrid">
+                    <h3 id="total_registros">Total de Registros: 0</h3>
+                    <!-- <h3>Qtde de Registros Ativos: 05</h3>
+                    <h3>Qtde de Registros Inativos: 01</h3> -->
+                </div>
+            </section>
+
         </div>
     </main>
+
     <%- include('rodape') %>
+
+    <script>
+        class PublicacoesStoreAbstrato {
+            async procurarPorId(id) {
+                let publicacoes = await this.listar(); 
+                try {
+                    return publicacoes.filter(p => p.id == id)[0];
+                } catch {
+                    return null;
+                }
+            }
+        }
+
+        class PublicacoesStoreArray extends PublicacoesStoreAbstrato {
+            publicacoes = [];
+            async inserir(publicacao) {
+                this.publicacoes.push(publicacao);
+                publicacao.id = this.publicacoes.length;
+            }
+            async listar() {
+                return this.publicacoes;
+            }
+            async alterarDados(id, novosDados){
+                 this.publicacoes.forEach(publicacao =>{
+                    if (publicacao.id==id){
+                        publicacao.chamada_noticia=novosDados.chamada_noticia;
+                        publicacao.data_inicio_publicacao=novosDados.data_inicio_publicacao;
+                        publicacao.data_fim_publicacao=novosDados.data_fim_publicacao;
+                        publicacao.situacao=novosDados.situacao;
+                        publicacao.textonoticia=novosDados.textonoticia;
+                    };
+                 });
+            }
+            async apagar(id){
+                let tPublicacoes = await this.publicacoes;
+                tPublicacoes.splice(tPublicacoes.id, 1);
+            }
+        }
+
+        class PublicacoesStoreFetch extends PublicacoesStoreAbstrato {
+            constructor(url) {
+                super();
+                this.url = url;
+            }
+            async inserir(publicacao) {
+                let response = await fetch(this.url, {
+                    method: 'post',     
+                    body: new URLSearchParams(publicacao), 
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    }
+                });
+                if (response.status == 201) {
+                    let novaPublicacao = await response.json();
+                    publicacao.id = novaPublicacao.id;
+                } else {
+                    let erro = await response.text();
+                    throw new Error(erro)
+                }
+            }
+            async listar() {
+                let response = await fetch(this.url);
+                return await response.json();
+            }
+            async procurarPorId(id) {
+                let response = await fetch(this.url + '/' + id);
+                return await response.json();
+            }
+        }
+
+        async function limpaCampos() {
+            let form = document.querySelector('form');
+            form.chamada_noticia.value = '';
+            form.data_inicio_publicacao.value = '';
+            form.data_fim_publicacao.value = '';
+            form.situacao.value = '';
+            form.textonoticia.value = '';
+
+        }
+
+        let botaoGravar = 1;
+        let idUsuarioAlterar = -1
+
+        let publicacoesStore = new PublicacoesStoreArray();
+        // // let PublicacoesStore = new PublicacoesStoreFetch('http://localhost:82/usuarios');
+
+
+        async function processaForm(form) {
+            let chamada_noticia = form.chamada_noticia.value;
+            let data_inicio_publicacao = form.data_inicio_publicacao.value;
+            let data_fim_publicacao = form.data_fim_publicacao.value;
+            let situacao = form.situacao.value;
+            let textonoticia = form.textonoticia.value;
+            try {
+                if (botaoGravar==1){
+                    await publicacoesStore.inserir({chamada_noticia, data_inicio_publicacao, data_fim_publicacao, situacao, textonoticia});
+                }else{
+                    let novosDados = {chamada_noticia, data_inicio_publicacao, data_fim_publicacao, situacao, textonoticia};
+                    await publicacoesStore.alterarDados(idPublicacaoAlterar, novosDados);
+                    botaoGravar = 1;
+                }
+                limpaCampos()
+                mostrarLista();
+            } catch(erro) {
+                alert(erro);
+            }
+        }
+
+        async function mostrarLista() {
+            const form = document.querySelector('form');
+            const table_grid = document.querySelector('#table_grid');
+            table_grid.innerHTML = '';
+            const fundoPopup = document.querySelector("#fundoPopup");
+            const corpoPopup = document.querySelector('#corpoPopup');
+            const btn_sair_Popup = document.querySelector('#btn_sair_Popup');
+
+            btn_sair_Popup.addEventListener("click",(evt)=>{
+                fundoPopup.classList.add("ocultarPopup");
+                mostrarLista();
+            });
+
+
+            let publicacoes = await publicacoesStore.listar();
+            let publicacoesAtivos  = 0;
+            let publicacoesInativos = 0;
+            let total_registros = publicacoes.length;
+            let h3_total_registros = document.querySelector('#total_registros');
+
+            publicacoes.forEach(pubicacao =>{
+                let id = pubicacao.id
+                let chamada_noticia = pubicacao.chamada_noticia;
+                let data_inicio_publicacao = pubicacao.data_inicio_publicacao;
+                let data_fim_publicacao = pubicacao.data_fim_publicacao;
+                let situacao = pubicacao.situacao;
+                let textonoticia = pubicacao.textonoticia;
+
+                const tr_dadosGrid = document.createElement('tr');
+                tr_dadosGrid.setAttribute('class','tr_dadosGrid');
+
+                const td_id = document.createElement('td');
+                td_id.setAttribute('class','td_dadoid');
+                td_id.innerHTML = id;
+                tr_dadosGrid.appendChild(td_id);
+
+                const td_chamada_noticia = document.createElement('td');
+                td_chamada_noticia.setAttribute('class','td_dadoChamada');
+                td_chamada_noticia.innerHTML = chamada_noticia;
+                tr_dadosGrid.appendChild(td_chamada_noticia);
+
+                const td_data_inicio_publicacao = document.createElement('td');
+                td_data_inicio_publicacao.setAttribute('class','td_dadoDataInicio');
+                td_data_inicio_publicacao.innerHTML = data_inicio_publicacao;
+                tr_dadosGrid.appendChild(td_data_inicio_publicacao);
+
+                const td_data_fim_publicacao = document.createElement('td');
+                td_data_fim_publicacao.setAttribute('class','td_dadoDataFim');
+                td_data_fim_publicacao.innerHTML = data_fim_publicacao;
+                tr_dadosGrid.appendChild(td_data_fim_publicacao);
+
+                const td_situacao = document.createElement('td');
+                td_situacao.setAttribute('class','td_dadoSituacao');
+
+                const div_situacao = document.createElement('div');
+                div_situacao.setAttribute('class', 'div_td_situacao'); 
+
+                const div_valorSituacao = document.createElement('div');
+                div_valorSituacao.setAttribute('class','div_valorSituacao');
+                div_valorSituacao.innerHTML = situacao;
+                div_situacao.appendChild(div_valorSituacao);
+
+                const div_imgSituacao = document.createElement('div');
+                div_imgSituacao.setAttribute('class','div_imgSituacao');
+                
+                const img_situacao = document.createElement('img');
+                img_situacao.setAttribute('class', 'icone');
+                if (situacao=='A'){
+                    img_situacao.setAttribute('title','Desativar');
+                    img_situacao.setAttribute('src', '/imagens/icons/ativar.svg');
+                    publicacoesAtivos+=1;
+                } else {
+                    img_situacao.setAttribute('title','Ativar');
+                    img_situacao.setAttribute('src', '/imagens/icons/desativar.svg');
+                    publicacoesInativos+=1;
+                }
+                div_imgSituacao.appendChild(img_situacao);
+                div_situacao.appendChild(div_imgSituacao);
+                td_situacao.appendChild(div_situacao);
+                tr_dadosGrid.appendChild(td_situacao)
+
+                const td_acoes = document.createElement('td');
+                td_acoes.setAttribute('class','td_dadoAcoes');
+                
+                const div_acoes = document.createElement('div');
+                div_acoes.setAttribute('class', 'div_acao');
+
+                const div_verTextoNotica = document.createElement('div');
+                div_verTextoNotica.setAttribute('class','div_dadocoluna6');
+
+                const img_ver = document.createElement('img');
+                img_ver.setAttribute('class', 'icone');
+                img_ver.setAttribute('src', '/imagens/icons/visualizar.svg');
+                img_ver.setAttribute('title', 'Ver Texto Da Notícia');
+                img_ver.addEventListener('click',(evt)=>{
+                    console.log('entrei no imagem ver');
+                    corpoPopup.innerHTML = textonoticia;
+                    fundoPopup.classList.remove("ocultarPopup");
+                })
+                div_verTextoNotica.appendChild(img_ver);
+                div_acoes.appendChild(div_verTextoNotica);
+
+                const div_editar = document.createElement('div');
+                div_editar.setAttribute('class','div_dadocoluna6');
+                const img_editar = document.createElement('img');
+                img_editar.setAttribute('class', 'icone');
+                img_editar.setAttribute('src', '/imagens/icons/editar.svg');
+                img_editar.setAttribute('title', 'Editar');
+                img_editar.addEventListener('click',(evt)=>{
+                    const idPublicacao=evt.target.parentNode.parentNode.parentNode.parentNode.firstChild.innerHTML; // 
+                    console.log('Id do Editar');
+                    console.log(idPublicacao);
+                    idPublicacaoAlterar = idPublicacao;
+                    botaoGravar = 2;
+                    alterar(idPublicacao);
+                })
+                div_editar.appendChild(img_editar);
+                div_acoes.appendChild(div_editar);
+
+                const div_excluir = document.createElement('div');
+                div_excluir.setAttribute('class','div_dadocoluna6');
+                const img_excluir = document.createElement('img');
+                img_excluir.setAttribute('class', 'icone');
+                img_excluir.setAttribute('src', '/imagens/icons/deletar.svg');
+                img_excluir.setAttribute('title', 'Excluir');
+                img_excluir.addEventListener('click',(evt)=>{
+                    const idPublicacao=evt.target.parentNode.parentNode.firstChild.innerHTML;
+                    apagar(idPublicacao);
+                })
+                div_excluir.appendChild(img_excluir);
+                div_acoes.appendChild(div_excluir);
+                td_acoes.appendChild(div_acoes);
+                tr_dadosGrid.appendChild(td_acoes);
+                table_grid.appendChild(tr_dadosGrid);
+            });
+
+            h3_total_registros.innerHTML = 'Total de Registros: ' + total_registros + ' - Total de Usuários Ativos: ' + publicacoesAtivos + ' - Total de Usuários Inativos: ' + publicacoesInativos;
+
+            // let lista_usuarios = await usuariosStore.listar();
+            // console.log(lista_usuarios);
+        }
+
+
+
+        async function alterar(id) {
+            let publicacao = await publicacoesStore.procurarPorId(id);
+            let form = document.querySelector('form');
+
+            form.chamada_noticia.value = publicacao.chamada_noticia;
+            form.data_inicio_publicacao.value = publicacao.data_inicio_publicacao;
+            form.data_fim_publicacao.value = publicacao.data_fim_publicacao;
+            form.situacao.value = publicacao.situacao;
+            form.textonoticia.value = publicacao.textonoticia;
+        }
+
+        async function apagar(idPublicao){
+            // console.log('entrou na função apagar')
+            // console.log('id do usuário dentro da função apagar')
+            // console.log(idPublicao);
+            await publicacoesStore.apagar(idPublicao);
+            mostrarLista();
+        }
+
+        mostrarLista();
+
+    </script>
 </body>
 </html>

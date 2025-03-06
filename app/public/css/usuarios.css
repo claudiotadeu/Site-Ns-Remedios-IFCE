@@ -132,6 +132,16 @@
     cursor: pointer;
 }
 
+.div_situacao{
+    border: 1px solid #000;
+    width: 100%;
+    display: grid;
+    /* grid-template-columns: 50% 50%; */
+}
+.div_situacao img{
+    cursor: pointer;
+}
+
 .div_acao{
     width: 100%;
     display: grid;
@@ -153,4 +163,5 @@
     padding: 17px;
 }
 
+/* div_tipoAcesso */
 

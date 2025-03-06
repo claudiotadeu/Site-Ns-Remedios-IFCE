@@ -7,7 +7,7 @@ const PessoaController = require('./controllers/PessoaController');
 const PessoasStore = require('./lib/PessoasStore');
 const UsuarioController = require('./controllers/UsuarioController');
 const UsuarioStore = require('./lib/UsuarioStore');
-const UsuariosStoreDb = require('./lib/UsuariosStoreDb');
+const UsuariosMysqlStore = require('./lib/UsuariosMysqlStore');
 const LoginController = require('./controllers/LoginController');
 const LoginStore = require('./lib/LoginStore');
 
@@ -16,6 +16,14 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
 
+const conectar = () => {
+    return mysql.createConnection({
+        host: 'db',
+        user: process.env.MARIADB_USER,
+        password: process.env.MARIADB_PASSWORD,
+        database: process.env.MARIADB_DATABASE,
+    });
+}
 
 const pool = mysql.createPool({
     host: 'localhost',
@@ -32,7 +40,7 @@ const pool = mysql.createPool({
 
 const pessoasStore = new PessoasStore();
 const usuarioStore = new UsuarioStore();
-const usuariosStoreDb = new UsuariosStoreDb();
+const usuariosMysqlStore = new UsuariosMysqlStore();
 const loginStore = new LoginStore();
 
 const indexController = new IndexController();
@@ -40,11 +48,9 @@ const pessoaController = new PessoaController(pessoasStore);
 const usuarioController = new UsuarioController(usuarioStore);
 const loginController = new LoginController(loginStore);
 
-
 app.get('/', (req, res) => {
     indexController.index(req, res);
 });
-
 
 // Login de Usuários
 
@@ -214,6 +220,22 @@ app.get('/publicacoes', (req, res) => {
 // app.delete('/pessoas/:id', (req, res) => {
 //     pessoaController.apagar(req, res);
 // })
+
+
+app.get('/teste_bd', async (req, res) => {
+    // A simple SELECT query
+    try {
+        const [results, fields] = await connection.query(
+            'SELECT * FROM `usuarios` WHERE id=1 '
+        );
+
+        res.json(results); // results contains rows returned by server
+        console.log(fields); // fields contains extra meta data about results, if available
+    } catch (err) {
+        console.log(err);
+    }
+});
+
 
 app.get('*', function naoEncontrado(request, response) {
     response.writeHead(404, {'Content-Type': 'text/plain'});
